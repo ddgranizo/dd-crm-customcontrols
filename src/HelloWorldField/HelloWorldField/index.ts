@@ -7,6 +7,9 @@ export class HelloWorldField implements ComponentFramework.StandardControl<IInpu
 	private _notifyOutputChanged: () => void
 	private _text: string;
 
+	private _textId = "myText";
+	private _pathTextId = `#${this._textId}`;
+
 	constructor() {
 
 	}
@@ -14,9 +17,9 @@ export class HelloWorldField implements ComponentFramework.StandardControl<IInpu
 	public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container: HTMLDivElement) {
 		this.initializeWrapper(container);
 		this._notifyOutputChanged = notifyOutputChanged;
-		$('#wrapper').append('<div style="background: red"><input type="text" id="myText"></input></div>');
-		$('#myText').on('change', (e) => {
-			this._text = $('#myText').val() as string;
+		$('#wrapper').append(`<div style="background: red"><input type="text" id="${this._textId}"></input></div>`);
+		$(this._pathTextId).on('change', (e) => {
+			this._text = $(this._pathTextId).val() as string;
 			this._notifyOutputChanged();
 		});
 	}
@@ -34,11 +37,11 @@ export class HelloWorldField implements ComponentFramework.StandardControl<IInpu
 	}
 
 	public destroy(): void {
-		// Add code to cleanup control if necessary
+
 	}
 
 	private refreshUI(): void {
-		$("#myText").val(this._text);
+		$(this._pathTextId).val(this._text);
 	}
 
 	private initializeWrapper(container: HTMLDivElement): void {
