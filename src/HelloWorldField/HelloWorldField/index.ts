@@ -17,7 +17,7 @@ export class HelloWorldField implements ComponentFramework.StandardControl<IInpu
 	public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container: HTMLDivElement) {
 		this.initializeWrapper(container);
 		this._notifyOutputChanged = notifyOutputChanged;
-		$('#wrapper').append(`<div style="background: red"><input type="text" id="${this._textId}"></input></div>`);
+		$('#wrapper').append(`<div><input class="fill-available" type="text" id="${this._textId}"></input></div>`);
 		$(this._pathTextId).on('change', (e) => {
 			this._text = $(this._pathTextId).val() as string;
 			this._notifyOutputChanged();
