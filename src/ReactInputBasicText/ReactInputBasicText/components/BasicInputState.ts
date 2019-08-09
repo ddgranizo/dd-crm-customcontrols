@@ -1,0 +1,3 @@
+interface IBasicInputState {
+    value: string
+}
