@@ -6,13 +6,20 @@
 			"oldValue": "ReactInputBasicText", 
 			"applyForDirectories": true, 
 			"applyForFileNames": true, 
-			"applyForFileContents": true
+			"applyForFileContents": true,
+			"applyForFilePattern": "*.json|*.pcfproj|.gitignore|*.xml|*.ts|*.tsx",
+		},
+		{
+			"replaceDescription": "Text property name", 
+			"oldValue": "textProperty", 
+			"applyForDirectories": false, 
+			"applyForFileNames": false, 
+			"applyForFileContents": true,
+			"applyForFilePattern": "*.json|*.pcfproj|.gitignore|*.xml|*.ts|*.tsx",
 		}
 	],
 	"ignorePathPatterns": [
 		"ddtemplate.json",
-		"node_modules/*.*",
-		"out/*.*",
-		"ReactInputBasicText/generated/*.*"
+		"node_modules/*.*"
 	]
 }
