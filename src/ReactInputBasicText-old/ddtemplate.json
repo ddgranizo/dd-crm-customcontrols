@@ -1,13 +1,7 @@
 {
 	"templateName": "React basic PCF TextBox",
 	"replacePairs": [
-		{
-			"replaceDescription": "Control name", 
-			"oldValue": "ReactInputBasicText", 
-			"applyForDirectories": true, 
-			"applyForFileNames": true, 
-			"applyForFileContents": true
-		}
+		{"replaceDescription": "Control name", "oldValue": "ReactInputBasicText", "applyForDirectories": true, "applyForFileNames": true, "applyForFileContents": true}
 	],
 	"ignorePathPatterns": [
 		"ddtemplate.json",
