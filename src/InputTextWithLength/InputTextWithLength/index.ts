@@ -50,6 +50,8 @@ export class InputTextWithLength implements ComponentFramework.StandardControl<I
 	}
 
 	public refreshData(evt: Event): void {
+
+		console.log("refresh!!!");
 		this._notifyOutputChanged();
 	}
 

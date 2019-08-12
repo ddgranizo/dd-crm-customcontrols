@@ -16,6 +16,7 @@
     -->
     <resources>
       <code path="index.ts" order="1"/>
+       <css path="style.css" order="2" />
       <!-- UNCOMMENT TO ADD MORE RESOURCES
       <css path="css/ReactInputBasicText.css" order="1" />
       <resx path="strings/ReactInputBasicText.1033.resx" version="1.0.0" />

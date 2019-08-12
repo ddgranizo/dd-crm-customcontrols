@@ -1,3 +1,4 @@
 export default interface IReactWrapperState {
-    value: string
+    value: string,
+    length: number
 }
