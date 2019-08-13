@@ -20,6 +20,8 @@ export class InputTextWithPattern implements ComponentFramework.StandardControl<
 		this._notifyOutputChanged = notifyOutputChanged;
 		container.appendChild(this._container);
 		this.onChangeValue = this.onChangeValue.bind(this);
+
+		this.onChangeValue(context.parameters.textProperty.raw);
 	}
 
 	public onChangeValue(value: string){
