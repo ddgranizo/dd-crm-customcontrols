@@ -18,7 +18,6 @@ export class ReactWrapper extends React.Component<IReactWrapperBasicProps, IReac
         if (nextProps.value !== this.state.value) {
             this.setState({ value: nextProps.value, length: nextProps.value.length})
         }
-
     }
 
     _handlerChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {

@@ -1,0 +1,30 @@
+.ReactWrapper-tooltipContainer{
+    background-color:#0e2247;
+    border-radius: 2px;
+    color:  #f5fbf1;
+    padding: 5px 3px 5px 3px ;
+    border: #000000 0.5px solid;
+}
+
+
+.ReactWrapper-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: stretch
+}
+
+
+.ReactWrapper-isValidContainer{
+    margin: 5px;
+}
+
+
+.ReactWrapper-isValid{
+    color: #4BB543;
+}
+
+
+.ReactWrapper-isNotValid{
+    color: #C40109;
+}

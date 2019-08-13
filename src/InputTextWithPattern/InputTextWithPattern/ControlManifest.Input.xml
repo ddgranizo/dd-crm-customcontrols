@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="DD.Crm.CustomControls.Fields" constructor="InputTextWithLength" version="0.0.1" display-name-key="InputTextWithLength_Display_Key" description-key="InputTextWithLength_Desc_Key" control-type="standard">
+  <control namespace="DD.Crm.CustomControls.Fields" constructor="InputTextWithPattern" version="0.0.1" display-name-key="InputTextWithPattern" description-key="InputTextWithPattern" control-type="standard">
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
-    <property name="textProperty" display-name-key="Input text value" description-key="Input text value" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="textProperty" display-name-key="Input value" description-key="textProperty" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="patternProperty" display-name-key="Regex pattern" description-key="patternProperty" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="errorMessageProperty" display-name-key="Error message" description-key="patternProperty" of-type="SingleLine.Text" usage="bound" required="true" />
     <!-- 
       Property node's of-type attribute can be of-type-group attribute. 
       Example:
@@ -16,10 +18,10 @@
     -->
     <resources>
       <code path="index.ts" order="1"/>
-      <css path="style.css" order="2" />
+       <css path="style.css" order="2" />
       <!-- UNCOMMENT TO ADD MORE RESOURCES
-      
-      <resx path="strings/InputTextWithLength.1033.resx" version="1.0.0" />
+      <css path="css/InputTextWithPattern.css" order="1" />
+      <resx path="strings/InputTextWithPattern.1033.resx" version="1.0.0" />
       -->
     </resources>
     <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
