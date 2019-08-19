@@ -4,11 +4,9 @@
 /dist
 /tmp
 /out-tsc
+**/obj
 
-
-/release/**/bin
-/release/**/obj
-
+/release
 
 # Runtime data
 pids

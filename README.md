@@ -16,10 +16,13 @@ npm install
 TODO
 
 # create solution
-pac solution init --publisherName "DanielDiazGranizo" --customizationPrefix ddg
+cd release
+pac solution init --publisher-name "DanielDiazGranizo" --publisher-prefix ddg
 
-# add component to solution
-pac solution add-reference --path "../../src/HelloWorldField"
+# add project to solution 
+pac solution add-reference --path "../src/Component1"
+pac solution add-reference --path "../src/Component2"
+etc
 
 # build
 

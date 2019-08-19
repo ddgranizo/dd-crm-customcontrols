@@ -1,0 +1,17 @@
+{
+	"templateName": "React basic 5 Views PCF TextBox",
+	"replacePairs": [
+		{
+			"replaceDescription": "Control name", 
+			"oldValue": "React5ViewsInputText", 
+			"applyForDirectories": true, 
+			"applyForFileNames": true, 
+			"applyForFileContents": true,
+			"applyForFilePattern": "*.json|*.pcfproj|.gitignore|*.xml|*.ts|*.tsx"
+		}
+	],
+	"ignorePathPatterns": [
+		"ddtemplate.json",
+		"node_modules/*.*"
+	]
+}

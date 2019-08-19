@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="DD.Crm.CustomControls.Fields" constructor="InputTextWithLength" version="0.0.1" display-name-key="InputTextWithLength_Display_Key" description-key="InputTextWithLength_Desc_Key" control-type="standard">
+  <control namespace="DD.Crm.CustomControls.Fields" constructor="InputTextWithLength" version="0.0.1" display-name-key="DD.Crm.CustomControls.Fields.InputTextWithLength" description-key="See the length of the text input while writting" control-type="standard">
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
     <property name="textProperty" display-name-key="Input text value" description-key="Input text value" of-type="SingleLine.Text" usage="bound" required="true" />
     <!-- 
