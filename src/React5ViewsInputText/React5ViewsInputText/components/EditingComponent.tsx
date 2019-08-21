@@ -20,7 +20,7 @@ export class EditingComponent extends React.Component<IEditingComponentProps, IE
 
     _handlerOnBlur = (event: React.FocusEvent<HTMLInputElement>) => {
         const newValue: IValue = this.state.value
-        this.props.updatedHandler(newValue);
+        this.props.commitedValueHandler(newValue);
     }
 
 
@@ -28,6 +28,7 @@ export class EditingComponent extends React.Component<IEditingComponentProps, IE
         const newValue: IValue = {
             stringValue: event.target.value
         }
+        this.props.updatedHandler(newValue)
         this.setState({ value: newValue })
     }
 

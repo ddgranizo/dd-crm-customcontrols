@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { IValuedNoOverMaskProps } from '../interfaces/IValuedNoOverMaskProps';
 import { IValuedNoOverMaskState } from '../interfaces/IValuedNoOverMaskState';
+import { Length } from './custom/Length';
 
 export class ValuedNoOverMaks extends React.Component<IValuedNoOverMaskProps, IValuedNoOverMaskState> {
 
@@ -38,6 +39,7 @@ export class ValuedNoOverMaks extends React.Component<IValuedNoOverMaskProps, IV
                             type="text"
                             value={value.stringValue} />
                     </div>
+                    <Length text={value.stringValue}></Length>
                 </div>
         )
     }

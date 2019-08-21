@@ -4,7 +4,7 @@ import { IValuedOverMaskState } from '../interfaces/IValuedOverMaskState';
 import { IEditingComponentProps } from '../interfaces/IEditingComponentProps';
 import { IEditingComponentState } from '../interfaces/IEditingComponentState';
 import { IValue } from '../interfaces/IValue';
-import { IsValidPattern } from './custom/IsValidPattern';
+import { Length } from './custom/Length';
 
 export class EditingComponent extends React.Component<IEditingComponentProps, IEditingComponentState> {
 
@@ -37,8 +37,7 @@ export class EditingComponent extends React.Component<IEditingComponentProps, IE
 
 
     render() {
-        const { value } = this.state
-        const { customProps } = this.props
+        const { value } = this.state;
         return (
             <div className="ReactWrapper-mainDiv">
                 <div className="ReactWrapper-divFlex" >
@@ -50,9 +49,7 @@ export class EditingComponent extends React.Component<IEditingComponentProps, IE
                         type="text"
                         value={value.stringValue} />
                 </div>
-                <div>
-                    <IsValidPattern errorMessage={customProps.errorMessage} text={value.stringValue} pattern={customProps.pattern}></IsValidPattern>
-                </div>
+                <Length text={value.stringValue}></Length>
             </div>
         )
     }

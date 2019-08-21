@@ -1,16 +1,12 @@
 import * as React from 'react';
-import { IValuedNoOverMaskProps } from '../interfaces/IValuedNoOverMaskProps';
-import { IValuedNoOverMaskState } from '../interfaces/IValuedNoOverMaskState';
+import { IEmptyNoOverMaskProps } from './../interfaces/IEmptyNoOverMaskProps';
+import { IEmptyNoOverMaskState } from './../interfaces/IEmptyNoOverMaskState';
 
-export class ValuedNoOverMaks extends React.Component<IValuedNoOverMaskProps, IValuedNoOverMaskState> {
+export class EmptyNoOverMask extends React.Component<IEmptyNoOverMaskProps, IEmptyNoOverMaskState> {
 
-    constructor(props: IValuedNoOverMaskProps) {
+    constructor(props: IEmptyNoOverMaskProps) {
         super(props);
-        this.state = {
-            value : this.props.value
-        }
     }
-
 
     _handlerOnFocus = (event: React.FocusEvent<HTMLInputElement>) => {
         this.props.focusHandler();
@@ -20,23 +16,17 @@ export class ValuedNoOverMaks extends React.Component<IValuedNoOverMaskProps, IV
         this.props.overHandler();
     }
 
-    componentWillReceiveProps(nextProps: IValuedNoOverMaskProps){
-        this.setState({value: nextProps.value})
-    }
-  
-
     render() {
-        const { value } = this.state;
+
         return (
                 <div className="ReactWrapper-mainDiv">
                     <div className="ReactWrapper-divFlex" >
                         <input
                             onFocus={this._handlerOnFocus}
                             onMouseMove={this._handlerMouseMove}
-                            onChange={()=>{}}
                             className="ReactWrapper-crmLabel"
                             type="text"
-                            value={value.stringValue} />
+                            defaultValue="---" />
                     </div>
                 </div>
         )

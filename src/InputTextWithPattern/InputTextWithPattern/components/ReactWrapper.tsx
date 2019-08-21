@@ -51,16 +51,21 @@ export class ReactWrapper extends React.Component<IReactWrapperProps, IReactWrap
         this.setState({ over: true })
     }
 
+    
     onValueChange = (value: IValue) => {
+        this.setState({ value })
+    }
+
+    onValueCommited = (value: IValue) => {
         this.props.handlerChange(value)
-        this.setState({ value, focused: false, over: false });
+        this.setState({ value, focused: false, over: false })
     }
 
     getCurrentView() {
         const { over, focused, value } = this.state;
         const valued = !this.valueIsEmpty(value);
         if (focused) {
-            return <EditingComponent lostFocusHandler={this.onLostFocus} value={value} customProps={this.props.customProps} updatedHandler={this.onValueChange}></EditingComponent>
+            return <EditingComponent lostFocusHandler={this.onLostFocus} value={value} customProps={this.props.customProps} updatedHandler={this.onValueChange} commitedValueHandler={this.onValueCommited} ></EditingComponent>
         } else {
             if (!valued && !over) {
                 return <EmptyNoOverMask focusHandler={this.onFocus} overHandler={this.onOver}></EmptyNoOverMask>
