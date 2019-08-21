@@ -2,11 +2,19 @@
     "pipelineConstants":{
         "msbuildPath" : "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\MSBuild\\Current\\Bin\\msbuild.exe",
         "customControlsPath": "C:\\Users\\daniel.diazg\\MyRepos\\dd-crm-customcontrols\\release",
-        "displaySolutionName": "DD.Crm.CustomControls.Fields",
+        "displaySolutionName": "DD.Crm.CustomControls",
         "uniqueSolutionName" : "dd_crm_customcontrols"
     },
     "commands": [
-   
+        {
+            "command": "cmd -c \"rmdir bin /s /q\"  -w \"[[customControlsPath]]\""
+        },
+        {
+            "command": "cmd -c \"rmdir obj /s /q\"  -w \"[[customControlsPath]]\""
+        },
+        {
+            "command": "cmd -c \"/t:restore\" -f \"[[msbuildPath]]\" -w \"[[customControlsPath]]\""
+        },
         {
             "command": "cmd -c \"/t:restore\" -f \"[[msbuildPath]]\" -w \"[[customControlsPath]]\""
         },
@@ -19,12 +27,6 @@
         },
         {
             "command": "unzip -p \"[[customControlsPath]]\\bin\\Release\\release.zip\""
-        },
-        {
-            "command": "replacefilecontent -p \"[[customControlsPath]]\\bin\\Release\\release\\solution.xml\" -o \"<UniqueName>release</UniqueName>\" -n \"<UniqueName>[[uniqueSolutionName]]</UniqueName>\""
-        },
-        {
-            "command": "replacefilecontent -p \"[[customControlsPath]]\\bin\\Release\\release\\solution.xml\" -o description=\"release\" -n description=\"[[displaySolutionName]]\""
         },
         {
             "command": "replacefilecontent -p \"[[customControlsPath]]\\bin\\Release\\release\\solution.xml\" -o \"<Version>1.0</Version>\" -n \"<Version>1.0.0.[[crm.customcontrols.build]]</Version>\""
