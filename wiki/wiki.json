@@ -1,0 +1,15 @@
+{
+  "projectName": "DD.Crm.CustomControls",
+  "projectDescription": "Custom controls for use with your Dynamics CRM 365",
+  "developerName": "Daniel Díaz Granizo",
+  "developerEmail": "ddgranizo@gmail.com",
+  "developerWebpage": "",
+  "mainImagePath": "",
+  "currentVersion": "",
+  "githubUrl": "",
+  "releaseNotes": [{ "version": "123", "bullets": [ "", ""], "thanksTo": "" }],
+  "controls": [
+      "",
+      ""
+  ]
+}

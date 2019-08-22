@@ -1,0 +1,9 @@
+{
+  "name": "InputTextWithAttached",
+  "image": "",
+  "description": "Attach one file in every string field in your form, so you can control if your record has the proper attached file",
+  "currentVersion": "",
+  "infoBullets": [],
+  "parameters": [{ "name": "", "type": "", "bound": false }],
+  "instructions": []
+}
