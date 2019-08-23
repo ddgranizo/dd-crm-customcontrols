@@ -8,15 +8,15 @@ export class ParametersList extends React.Component {
 
     render() {
         const { parameters } = this.props
-        if (parameters.length == 0) {
+        if (parameters == null || parameters.length == 0) {
             return <div>This control hasn't parameters</div>
         }
 
         return (
-            <div clasName="ControlDetail-AtributeList">
+            <div className="ControlDetail-AtributeList">
                 {
                     parameters.map((param, index) => {
-                        return <div  key={index}><ParameterDetail parameter={param}></ParameterDetail> </div>
+                        return <div key={index}><ParameterDetail parameter={param}></ParameterDetail> </div>
                     })
                 }
             </div>

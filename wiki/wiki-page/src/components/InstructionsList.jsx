@@ -7,7 +7,7 @@ export class InstructionsList extends React.Component {
 
     render() {
         const { instructions } = this.props
-        if (instructions.length == 0) {
+        if (instructions == null || instructions.length == 0) {
             return <div>This control hasn't instructions</div>
         }
 

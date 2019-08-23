@@ -3,6 +3,7 @@ import 'bulma/css/bulma.css'
 import { ClipLoader } from 'react-spinners';
 import { ParametersList } from './ParametersList';
 import { InstructionsList } from './InstructionsList';
+import { ComponentNotesList } from './ComponentNotesList';
 
 export class ControlDetail extends React.Component {
 
@@ -31,7 +32,18 @@ export class ControlDetail extends React.Component {
 
 
     renderTabContent(control) {
-        const { currentVersion, description, image, infoBullets, instructions, name, parameters, emoji, githubPath, releaseNotes } = control
+        const {
+            currentVersion,
+            description,
+            image,
+            releaseNotes,
+            infoBullets,
+            instructions,
+            name,
+            parameters,
+            emoji,
+            githubPath } = control
+
         const { selectedTab } = this.state
         if (selectedTab === 'info') {
             return (<div>
@@ -47,13 +59,13 @@ export class ControlDetail extends React.Component {
             )
         }
         else if (selectedTab === 'parameters') {
-            return ( <ParametersList parameters={parameters}></ParametersList>)
+            return (<ParametersList parameters={parameters}></ParametersList>)
         }
         else if (selectedTab === 'instructions') {
-            return ( <InstructionsList instructions={instructions}></InstructionsList>)
+            return (<InstructionsList instructions={instructions}></InstructionsList>)
         }
         else if (selectedTab === 'notes') {
-            return ( <InstructionsList instructions={instructions}></InstructionsList>)
+            return (<ComponentNotesList notes={releaseNotes}></ComponentNotesList>)
         }
     }
 
