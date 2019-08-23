@@ -13,7 +13,7 @@ export class ParametersList extends React.Component {
         }
 
         return (
-            <div className="">
+            <div className>
                 {
                     parameters.map((param, index) => {
                         return <div key={index}><ParameterDetail parameter={param}></ParameterDetail> </div>

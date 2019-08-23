@@ -2,9 +2,9 @@
 <manifest>
   <control namespace="DD.Crm.CustomControls.Fields" constructor="InputTextWithPattern" version="0.0.20" display-name-key="DD.Crm.CustomControls.Fields.InputTextWithPattern" description-key="Make one string field to match with some pattern (email, url, card number, etc)" control-type="standard">
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
-    <property name="textProperty" display-name-key="Input value" description-key="textProperty" of-type="SingleLine.Text" usage="bound" required="true" />
-    <property name="patternProperty" display-name-key="Regex pattern" description-key="patternProperty" of-type="SingleLine.Text" usage="input" required="true" />
-    <property name="errorMessageProperty" display-name-key="Error message" description-key="patternProperty" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="textProperty" display-name-key="Input value" description-key="Main field" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="patternProperty" display-name-key="Regex pattern" description-key="Regex pattern (do not include first and last '/' character). You can find a lot of regex patterns in http://regexlib.com/ or searching in google. Also you can create your own patterns: https://regex101.com/" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="errorMessageProperty" display-name-key="Error message" description-key="Message for show if string doesn't match" of-type="SingleLine.Text" usage="input" required="true" />
     <!-- 
       Property node's of-type attribute can be of-type-group attribute. 
       Example:

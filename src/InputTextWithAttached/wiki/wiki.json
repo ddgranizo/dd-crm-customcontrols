@@ -14,7 +14,7 @@
     {
       "name": "textProperty",
       "displayName":"Input value",
-      "type": "Input value",
+      "type": "SingleLine.Text",
      
       "description": "Main field for save the annotation ID",
       "bound": true,

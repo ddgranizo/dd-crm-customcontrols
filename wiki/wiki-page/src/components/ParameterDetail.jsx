@@ -6,10 +6,10 @@ import 'bulma/css/bulma.css'
 export class ParameterDetail extends React.Component {
 
     render() {
-        const {displayName, name, description, type, required, bound} = this.props.parameter
+        const {displayName, name, description, type, required, bound, tips} = this.props.parameter
         
         return (<nav className="panel">
-            <p className="panel-heading">{displayName}</p>
+            <p className="panel-heading">🔠 {name}</p>
             <div className="panel-block"><span><b>Display name: </b>{displayName}</span></div>
             <div className="panel-block"><span><b>Name: </b>{name}</span></div>
             <div className="panel-block"><span><b>Description: </b>{description}</span></div>
