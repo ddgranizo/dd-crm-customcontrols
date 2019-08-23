@@ -20,7 +20,8 @@ export class ControlDetail extends React.Component {
 
 
     async componentDidMount() {
-        var response = await fetch(this.props.control)
+        const {controlName} = this.props
+        var response = await fetch(`https://raw.githubusercontent.com/ddgranizo/dd-crm-customcontrols/master/src/${controlName}/wiki/wiki.json`)
         var control = await response.json()
         this.setState({ control, loading: false })
         console.log(control)
@@ -76,13 +77,13 @@ export class ControlDetail extends React.Component {
             return <ClipLoader></ClipLoader>
         }
 
-        const { currentVersion, name, emoji, githubPath } = control
+        const { currentVersion, name, emoji, githubPath, namespace } = control
 
         return (
             <div className="card ControlDetail-card">
                 <header className="card-header">
                     <p className="card-header-title">
-                        <span>{emoji}</span><span>{name}</span>
+                        <span>{emoji}</span><span>{namespace}.{name}</span>
                     </p>
                 </header>
 

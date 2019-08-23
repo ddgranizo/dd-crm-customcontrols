@@ -4,6 +4,7 @@
   "description": "Attach one file in every string field in your form, so you can control if your record has the proper attached files",
   "currentVersion": "1.0.0.1",
   "emoji":"🎨",
+  "namespace": "DD.Crm.CustomControls.Fields",
   "githubPath":"https://github.com/ddgranizo/dd-crm-customcontrols/tree/master/src/InputTextWithAttached",
   "infoBullets": [
     "Use text fields for attach files",

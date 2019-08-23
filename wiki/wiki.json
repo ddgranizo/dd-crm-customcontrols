@@ -15,8 +15,8 @@
     }
   ],
   "controls": [
-    "https://raw.githubusercontent.com/ddgranizo/dd-crm-customcontrols/master/src/InputTextWithAttached/wiki/wiki.json",
-    "https://raw.githubusercontent.com/ddgranizo/dd-crm-customcontrols/master/src/InputTextWithLength/wiki/wiki.json",
-    "https://raw.githubusercontent.com/ddgranizo/dd-crm-customcontrols/master/src/InputTextWithPattern/wiki/wiki.json"
+    "InputTextWithAttached",
+    "InputTextWithLength",
+    "InputTextWithPattern"
   ]
 }

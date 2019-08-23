@@ -3,6 +3,7 @@
   "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithPattern/wiki/img/main.png",
   "description": "Validate any string in real time while writting agains one regex pattern",
   "currentVersion": "0.0.20",
+  "namespace": "DD.Crm.CustomControls.Fields",
   "emoji": "🎋",
   "githubPath": "https://github.com/ddgranizo/dd-crm-customcontrols/tree/master/src/InputTextWithPattern",
   "infoBullets": [
