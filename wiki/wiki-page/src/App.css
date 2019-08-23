@@ -1,13 +1,15 @@
 .ControlList-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   padding: 16px;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
 }
 
 .ControlList-listItem {
   margin-bottom: 24px;
   width: 48%;
+  flex-grow: 0 !important
 }
 
 

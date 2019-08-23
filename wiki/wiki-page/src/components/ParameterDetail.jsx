@@ -8,7 +8,7 @@ export class ParameterDetail extends React.Component {
     render() {
         const {displayName, name, description, type, required, bound} = this.props.parameter
         
-        return (<nav className="panel ControlDetail-AtributeItem">
+        return (<nav className="panel">
             <p className="panel-heading">{displayName}</p>
             <div className="panel-block"><span><b>Display name: </b>{displayName}</span></div>
             <div className="panel-block"><span><b>Name: </b>{name}</span></div>

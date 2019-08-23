@@ -3,6 +3,7 @@
   "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithLength/wiki/img/main.png",
   "description": "See the length of the field while writting",
   "currentVersion": "0.0.2",
+  "emoji": "☔",
   "githubPath": "https://github.com/ddgranizo/dd-crm-customcontrols/tree/master/src/InputTextWithLength",
   "infoBullets": ["Control the length of the field while writting"],
   "parameters": [
@@ -10,7 +11,7 @@
       "name": "textProperty",
       "displayName": "Input value",
       "type": "Input value",
-      "emoji": "☔",
+
       "description": "Main field for save the annotation ID",
       "bound": true,
       "required": true
