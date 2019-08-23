@@ -1,6 +1,8 @@
 import React from 'react'
 import 'bulma/css/bulma.css'
 import { ClipLoader } from 'react-spinners';
+import { ParametersList } from './ParametersList';
+import { InstructionsList } from './InstructionsList';
 
 export class ControlDetail extends React.Component {
 
@@ -29,7 +31,7 @@ export class ControlDetail extends React.Component {
 
 
     renderTabContent(control) {
-        const { currentVersion, description, image, infoBullets, instructions, name, parameters, emoji, githubPath } = control
+        const { currentVersion, description, image, infoBullets, instructions, name, parameters, emoji, githubPath, releaseNotes } = control
         const { selectedTab } = this.state
         if (selectedTab === 'info') {
             return (<div>
@@ -44,27 +46,14 @@ export class ControlDetail extends React.Component {
             </div>
             )
         }
-
-        if (selectedTab === 'parameters') {
-            if (parameters.length == 0) {
-                return <div>This control hasn't parameters</div>
-            }
-            return (<div>
-                {
-                    parameters.map((param, index) => {
-                        return <nav className="panel" key={index}>
-                            <p className="panel-heading">{param.displayName}</p>
-                            <div className="panel-block"><span><b>Display name: </b>{param.displayName}</span></div>
-                            <div className="panel-block"><span><b>Name: </b>{param.name}</span></div>
-                            <div className="panel-block"><span><b>Description: </b>{param.description}</span></div>
-                            <div className="panel-block"><span><b>Type: </b>{param.type}</span></div>
-                            <div className="panel-block"><span><b>Required: </b>{param.required ? "Yes" : "No"}</span></div>
-                            <div className="panel-block"><span><b>Bound: </b>{param.bound ? "Yes" : "No"}</span></div>
-                        </nav>
-                    })
-                }
-            </div>
-            )
+        else if (selectedTab === 'parameters') {
+            return ( <ParametersList parameters={parameters}></ParametersList>)
+        }
+        else if (selectedTab === 'instructions') {
+            return ( <InstructionsList instructions={instructions}></InstructionsList>)
+        }
+        else if (selectedTab === 'notes') {
+            return ( <InstructionsList instructions={instructions}></InstructionsList>)
         }
     }
 
@@ -75,7 +64,7 @@ export class ControlDetail extends React.Component {
             return <ClipLoader></ClipLoader>
         }
 
-        const { currentVersion, description, image, infoBullets, instructions, name, parameters, emoji, githubPath } = control
+        const { currentVersion, name, emoji, githubPath } = control
 
         return (
             <div className="card ControlDetail-card">

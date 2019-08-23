@@ -20,6 +20,9 @@
       "required": true
     }
   ],
+  "releaseNotes": [
+    "First version of the component"
+  ],
   "instructions": [
     {
       "name": "Click Select file",

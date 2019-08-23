@@ -1,6 +1,6 @@
 import React from 'react'
 import 'bulma/css/bulma.css'
-import { ControlList } from './ControlList';
+import { ControlList } from './../components/ControlList';
 import { ClipLoader } from 'react-spinners';
 
 export class Home extends React.Component {
@@ -34,7 +34,7 @@ export class Home extends React.Component {
         return (
             <article className="message is-info Home-leftAligned">
                 <div className="message-header">
-                    Lastest release notes
+                    Lastest release notes 🔥🔥🔥
                 </div>
                 <div className="message-body">
                     <div className="content">
@@ -67,7 +67,7 @@ export class Home extends React.Component {
                 <section className="hero is-info">
                     <div className="hero-body">
                         <div className="container">
-                            <h1 className="title">{projectName} v {currentVersion}</h1>
+                            <h1 className="title">💊 {projectName} v {currentVersion} 💊</h1>
                             <h2 className="subtitle">{projectDescription}</h2>
                             {this.renderReleasesNotes()}
                         </div>
@@ -77,7 +77,7 @@ export class Home extends React.Component {
                 <section className="hero is-warning">
                     <div className="hero-body">
                         <div className="container">
-                            <h1 className="title">Components list</h1>
+                            <h1 className="title">⚡ Components list ⚡</h1>
                             <h2 className="subtitle">Check all the componentes in the current release</h2>
                             <ControlList controls={controls}></ControlList>
                         </div>

@@ -10,9 +10,9 @@ export class Title extends React.Component {
         return (
             <nav className="navbar" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
-                    <a className="navbar-item" href="#">
-                        <img src="https://ddgranizo.github.io/dd-crm-customcontrols/wiki/wiki-page/public/logo.png" width="30" height="30" />
-                    </a>
+
+                    <a className="navbar-item" href="#"><div className="subtitle"> 💊</div></a>
+
                     <a className="navbar-item" style={{ padding: '0px' }} href="#"><h1 className="title is-5"> DD CustomControls for CRM Dynamics 365 </h1></a>
                 </div>
 
