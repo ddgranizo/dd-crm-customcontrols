@@ -3,15 +3,12 @@ import 'bulma/css/bulma.css'
 
 export class Footer extends React.Component {
 
-
     render() {
         return (
-            <footer class="footer">
-                <div class="content has-text-centered">
+            <footer className="footer">
+                <div className="content has-text-centered">
                     <p>
-                        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                    is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                        <strong>DD.Crm.CustomControls</strong> by <a href="mailto:ddgranizo@gmail.com">Daniel Díaz Granizo</a>. Check my <a href="https://github.com/ddgranizo" target="_blank">GitHub</a> page or my <a href="https://www.linkedin.com/in/daniel-diaz-granizo-107119115/" target="_blank">Linkedin</a> profile.
                     </p>
                 </div>
             </footer>

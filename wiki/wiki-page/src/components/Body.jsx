@@ -1,20 +1,26 @@
 import React from 'react'
 import 'bulma/css/bulma.css'
+import { Switch, Route } from 'react-router-dom'
+import { Home } from './../pages/Home'
+import { Detail } from './../pages/Detail'
+import { Contact } from './../pages/Contact'
+import { Installation } from './../pages/Installation'
+import { ComponentList } from './../pages/ComponentList'
+import { NotFound } from '../pages/NotFound';
+
 
 export class Body extends React.Component {
 
     render() {
         return (
-            <section class="hero is-primary">
-                <div class="hero-body">
-                    <div class="container">
-                        <h1 class="title">
-                            Primary title  </h1>
-                        <h2 class="subtitle">
-                            Primary subtitle  </h2>
-                    </div>
-                </div>
-            </section>
+            <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/components' component={ComponentList} />
+                <Route exact path='/install' component={Installation} />
+                <Route exact path='/contact' component={Contact} />
+                <Route path='/detail/:id' component={Detail} />
+                <Route component={NotFound} />
+            </Switch>
         )
     }
 }

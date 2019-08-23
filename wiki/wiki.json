@@ -3,13 +3,12 @@
   "projectDescription": "Custom controls for use with your Dynamics CRM 365",
   "developerName": "Daniel Díaz Granizo",
   "developerEmail": "ddgranizo@gmail.com",
-  "developerWebpage": "",
-  "mainImagePath": "",
-  "currentVersion": "",
-  "githubUrl": "",
-  "releaseNotes": [{ "version": "123", "bullets": [ "", ""], "thanksTo": "" }],
+  "currentVersion": "1.0.0.1",
+  "releaseNotes": [
+    { "version": "123", "bullets": [ "", ""], "thanksTo": "" }
+  ],
   "controls": [
-      "",
+      "https://raw.githubusercontent.com/ddgranizo/dd-crm-customcontrols/master/src/InputTextWithAttached/wiki/wiki.json",
       ""
   ]
 }
