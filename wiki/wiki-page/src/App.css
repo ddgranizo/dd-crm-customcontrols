@@ -1,3 +1,14 @@
+.ControlDetail-card{
+  max-width: 50em !important;
+  width: 50em !important;
+  padding: 1em;
+}
+
+.Home-leftAligned{
+  text-align: start
+}
+
+
 .App {
   text-align: center;
 }

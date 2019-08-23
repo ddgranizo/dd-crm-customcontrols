@@ -1,6 +1,6 @@
 import React from 'react'
 import 'bulma/css/bulma.css'
-import { ComponentList } from './ComponentList';
+import { ControlList } from './ControlList';
 import { ClipLoader } from 'react-spinners';
 
 export class Home extends React.Component {
@@ -11,6 +11,7 @@ export class Home extends React.Component {
             loading: true,
             releaseInfo: null
         }
+
     }
 
 
@@ -28,20 +29,30 @@ export class Home extends React.Component {
         if (releaseNotes.length == 0) {
             return <p>Current version hasn't release notes</p>
         }
-
         const latestRelease = releaseNotes[0]
-        console.log(latestRelease)
+
         return (
-            <div>
-                <p> Release notes of current version</p> 
-                <ul>
-                    {
-                        latestRelease.bullets.map((bullet, index) => {
-                            return <li key={index}>{bullet}</li>
-                        })
-                    }
-                </ul>
-            </div>)
+            <article className="message is-info Home-leftAligned">
+                <div className="message-header">
+                    Lastest release notes
+                </div>
+                <div className="message-body">
+                    <div className="content">
+                        <div className="level">
+                            <div className="level-left">
+                                <ul >
+                                    {
+                                        latestRelease.bullets.map((bullet, index) => {
+                                            return <li key={index}>{bullet}</li>
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>)
+
     }
 
     render() {
@@ -68,6 +79,7 @@ export class Home extends React.Component {
                         <div className="container">
                             <h1 className="title">Components list</h1>
                             <h2 className="subtitle">Check all the componentes in the current release</h2>
+                            <ControlList controls={controls}></ControlList>
                         </div>
                     </div>
                 </section>
