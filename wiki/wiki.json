@@ -1,7 +1,7 @@
 {
   "projectName": "DD.Crm.CustomControls",
   "projectDescription": "Custom controls for use with your Dynamics CRM 365",
-  "currentVersion": "1.0.0.1",
+  "currentVersion": "1.0.0.2",
   "releaseNotes": [
     {
       "version": "1.0.0.1",
@@ -9,7 +9,7 @@
         "Added custom field control 'InputTextWithAttached'",
         "Added custom field control 'InputTextWithLength'",
         "Added custom field control 'InputTextWithPattern'"
-        
+
       ],
       "thanksTo": ""
     }
