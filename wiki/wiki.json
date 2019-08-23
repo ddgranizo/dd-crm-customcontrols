@@ -9,6 +9,7 @@
         "Added custom field control 'InputTextWithAttached'",
         "Added custom field control 'InputTextWithLength'",
         "Added custom field control 'InputTextWithPattern'"
+        
       ],
       "thanksTo": ""
     }

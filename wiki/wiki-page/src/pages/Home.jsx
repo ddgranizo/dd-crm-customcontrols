@@ -18,7 +18,30 @@ export class Home extends React.Component {
         const response = await fetch("https://raw.githubusercontent.com/ddgranizo/dd-crm-customcontrols/master/wiki/wiki.json")
         const releaseInfo = await response.json()
         console.log(releaseInfo);
-        this.setState({loading: false, releaseInfo})
+        this.setState({ loading: false, releaseInfo })
+    }
+
+
+    renderReleasesNotes() {
+        const { releaseNotes } = this.state.releaseInfo
+
+        if (releaseNotes.length == 0) {
+            return <p>Current version hasn't release notes</p>
+        }
+
+        const latestRelease = releaseNotes[0]
+        console.log(latestRelease)
+        return (
+            <div>
+                <p> Release notes of current version</p> 
+                <ul>
+                    {
+                        latestRelease.bullets.map((bullet, index) => {
+                            return <li key={index}>{bullet}</li>
+                        })
+                    }
+                </ul>
+            </div>)
     }
 
     render() {
@@ -27,15 +50,15 @@ export class Home extends React.Component {
             return <ClipLoader></ClipLoader>
         }
 
-        const {controls, currentVersion, projectDescription, projectName, releaseNotes} = this.state.releaseInfo
+        const { controls, currentVersion, projectDescription, projectName } = this.state.releaseInfo
         return (
             <div>
                 <section className="hero is-info">
                     <div className="hero-body">
                         <div className="container">
-                            <span><h1 className="title">{projectName}</h1><h2>{currentVersion}</h2></span>
+                            <h1 className="title">{projectName} v {currentVersion}</h1>
                             <h2 className="subtitle">{projectDescription}</h2>
-
+                            {this.renderReleasesNotes()}
                         </div>
                     </div>
                 </section>
