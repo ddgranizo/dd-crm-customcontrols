@@ -3,10 +3,22 @@
   "constants": {
     "msbuildPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\MSBuild\\Current\\Bin\\msbuild.exe",
     "customControlsPath": "C:\\Users\\daniel.diazg\\MyRepos\\dd-crm-customcontrols\\release",
+    "customControlsWikiPath": "C:\\Users\\daniel.diazg\\MyRepos\\dd-crm-customcontrols\\wiki",
     "displaySolutionName": "DD.Crm.CustomControls",
     "uniqueSolutionName": "dd_crm_customcontrols"
   },
+  "variables":[
+    "previousVersion"
+  ],
   "commands": [
+    {
+      "alias": "Confirm update componente\\Wiki.json",
+      "command": "confirm \"Have you updated the file wiki.json in every new control? Remember the version, parameters etc\""
+    },
+    {
+      "alias": "Confirm update Wiki.json",
+      "command": "confirm \"Have you updated the main file wiki.json? Remember to add the new controls to the array and add the new release notes\""
+    },
     {
       "alias": "Remove old folder bin",
       "command": "cmd -c \"rmdir bin /s /q\"  -w \"[[customControlsPath]]\""
@@ -78,6 +90,14 @@
     {
       "alias": "Move unmanaged solution",
       "command": "movepath -sp \"[[customControlsPath]]\\bin\\Debug\\[[displaySolutionName]].zip\" -df \"[[customControlsPath]]\\archive\\1.0.[[crm.customcontrols.release]].[[crm.customcontrols.build]]\\unmanaged\""
+    },
+    {
+      "alias": "Replace latest version with new version in wiki.json",
+      "command": "replacefilecontent -p \"[[customControlsWikiPath]]\\wiki.json\" -o \"[[previousVersion]]\" -n \"1.0.[[crm.customcontrols.release]].[[crm.customcontrols.build]]\" -t 3"
+    },
+    {
+      "alias": "Replace current date in wiki.json",
+      "command": "replacefilecontent -p \"[[customControlsWikiPath]]\\wiki.json\" -op \"$$latestReleaseDate$$: $$(.*?)$$\" -n \"$$latestReleaseDate$$: $$[[$now]]$$\""
     }
   ]
 }

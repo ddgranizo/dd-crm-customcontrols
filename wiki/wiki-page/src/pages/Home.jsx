@@ -39,9 +39,9 @@ export class Home extends React.Component {
                                         </header>
                                         <div class="card-content">
                                             <div class="content">
-                                                Download latest version <a href="#">#{currentVersion}</a> as a <a href="#">Managed</a> solution
+                                                Download latest version  <a href="#">#{currentVersion}</a> as a <a href="#">Managed</a> solution
                                                     <br />
-                                                <time datetime="2016-1-1">{latestReleaseDate}</time>
+                                                <time datetime="2016-1-1">📅 {latestReleaseDate}</time>
                                             </div>
                                         </div>
                                         <footer class="card-footer">
@@ -56,7 +56,7 @@ export class Home extends React.Component {
                                             <div class="content">
                                                 Download latest version <a href="#">#{currentVersion}</a> as a <a href="#">Unmanaged</a> solution
                                                     <br />
-                                                <time datetime="2016-1-1">{latestReleaseDate}</time>
+                                                <time datetime="2016-1-1">📅 {latestReleaseDate}</time>
                                             </div>
                                         </div>
                                         <footer class="card-footer">

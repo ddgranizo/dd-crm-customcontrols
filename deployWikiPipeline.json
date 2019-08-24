@@ -1,0 +1,29 @@
+{
+  "name": "Deploy new wiki version",
+  "constants": {
+    "wikiPath": "C:\\Users\\daniel.diazg\\MyRepos\\dd-crm-customcontrols\\wiki",
+    "rootPath": "C:\\Users\\daniel.diazg\\MyRepos\\dd-crm-customcontrols"
+  },
+  "commands": [
+    {
+      "alias": "npm run-script build",
+      "command": "cmd -c \"npm run-script build\"  -w \"[[wikiPath]]\\wiki-page\""
+    },
+    {
+      "alias": "copy index to root path",
+      "command": "movepath -sp \"[[wikiPath]]\\wiki-page\\build\\index.html\" -df \"[[rootPath]]\""
+    },
+    {
+      "alias": "Replace favicon path",
+      "command": "replacefilecontent -p \"[[rootPath]]\\index.html\" -o \"href=$$/favicon.ico$$\" -n \"href=$$/wiki/wiki-page/build/favicon.ico$$\""
+    },
+    {
+      "alias": "Replace manifest path",
+      "command": "replacefilecontent -p \"[[rootPath]]\\index.html\" -o \"href=$$/manifest.json$$\" -n \"href=$$/wiki/wiki-page/build/manifest.json$$\""
+    },
+    {
+      "alias": "Replace css and scripts path",
+      "command": "replacefilecontent -p \"[[rootPath]]\\index.html\" -o \"static\" -n \"wiki/wiki-page/build/static\""
+    }
+  ]
+}

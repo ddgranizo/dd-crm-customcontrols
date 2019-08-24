@@ -1,13 +1,13 @@
 {
   "projectName": "DD.Crm.CustomControls",
   "projectDescription": "Custom controls for use with your Dynamics CRM 365",
-  "currentVersion": "1.0.1.0",
+  "currentVersion": "1.0.5.101",
   "latestReleaseUnamanagedUrl": "https://github.com/ddgranizo/dd-crm-customcontrols/blob/master/release/archive/1.0.5.101/unmanaged/DD.Crm.CustomControls.zip?raw=true",
   "latestReleaseManagedUrl": "https://github.com/ddgranizo/dd-crm-customcontrols/blob/master/release/archive/1.0.5.101/managed/DD.Crm.CustomControls.zip?raw=true",
-  "latestReleaseDate": "1 enero 2019",
+  "latestReleaseDate": "24/08/2019 20:49:42",
   "releaseNotes": [
     {
-      "version": "1.0.1.0",
+      "version": "1.0.4.101",
       "bullets": [
         "Added custom field control 'InputTextWithAttached' 🎨",
         "Added custom field control 'InputTextWithLength' 🐙",
