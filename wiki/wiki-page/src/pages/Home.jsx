@@ -35,7 +35,7 @@ export class Home extends React.Component {
                                 <div className="Home-DonwloadList w100">
                                     <div class="Home-DonwloadItem card">
                                         <header class="card-header">
-                                            <p class="card-header-title">Managed (⭐⭐  RECOMENDED ⭐⭐)</p>
+                                            <p class="card-header-title">📕 Managed (⭐⭐  RECOMENDED ⭐⭐)</p>
                                         </header>
                                         <div class="card-content">
                                             <div class="content">
@@ -50,7 +50,7 @@ export class Home extends React.Component {
                                     </div>
                                     <div class="Home-DonwloadItem card">
                                         <header class="card-header">
-                                            <p class="card-header-title">Unmanaged</p>
+                                            <p class="card-header-title">📗 Unmanaged</p>
                                         </header>
                                         <div class="card-content">
                                             <div class="content">
