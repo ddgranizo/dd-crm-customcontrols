@@ -1,0 +1,83 @@
+{
+  "name": "Deploy custom controls for develop replacing build version",
+  "constants": {
+    "msbuildPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\MSBuild\\Current\\Bin\\msbuild.exe",
+    "customControlsPath": "C:\\Users\\daniel.diazg\\MyRepos\\dd-crm-customcontrols\\release",
+    "displaySolutionName": "DD.Crm.CustomControls",
+    "uniqueSolutionName": "dd_crm_customcontrols"
+  },
+  "commands": [
+    {
+      "alias": "Remove old folder bin",
+      "command": "cmd -c \"rmdir bin /s /q\"  -w \"[[customControlsPath]]\""
+    },
+    {
+      "alias": "Remove old folder obj",
+      "command": "cmd -c \"rmdir obj /s /q\"  -w \"[[customControlsPath]]\""
+    },
+    {
+      "alias": "msbuild restore",
+      "command": "cmd -c \"/t:restore\" -f \"[[msbuildPath]]\" -w \"[[customControlsPath]]\""
+    },
+    {
+      "alias": "Build unmanaged solution",
+      "command": "cmd -f \"[[msbuildPath]]\" -w \"[[customControlsPath]]\""
+    },
+    {
+      "alias": "Unzip unmanaged result solution",
+      "command": "unzip -p \"[[customControlsPath]]\\bin\\Debug\\release.zip\""
+    },
+    {
+      "alias": "Replace unmanaged current version with current build number",
+      "command": "replacefilecontent -p \"[[customControlsPath]]\\bin\\Debug\\release\\solution.xml\" -o \"<Version>1.0</Version>\" -n \"<Version>1.0.[[crm.customcontrols.release]].[[crm.customcontrols.build]]</Version>\""
+    },
+    {
+      "alias": "Rename result folder name",
+      "command": "renamefolder -o [[customControlsPath]]\\bin\\Debug\\release -n [[displaySolutionName]]"
+    },
+    {
+      "alias": "Make managed solution zip",
+      "command": "zip -p [[customControlsPath]]\\bin\\Debug\\[[displaySolutionName]]"
+    },
+    {
+      "alias": "Build managed solution",
+      "command": "cmd -c \"/P:Configuration=Release\" -f \"[[msbuildPath]]\" -w \"[[customControlsPath]]\""
+    },
+    {
+      "alias": "Unzip managed result solution",
+      "command": "unzip -p \"[[customControlsPath]]\\bin\\Release\\release.zip\""
+    },
+    {
+      "alias": "Replace managed current version with current build number",
+      "command": "replacefilecontent -p \"[[customControlsPath]]\\bin\\Release\\release\\solution.xml\" -o \"<Version>1.0</Version>\" -n \"<Version>1.0.[[crm.customcontrols.release]].[[crm.customcontrols.build]]</Version>\""
+    },
+    {
+      "alias": "Rename result folder name",
+      "command": "renamefolder -o [[customControlsPath]]\\bin\\Release\\release -n [[displaySolutionName]]"
+    },
+    {
+      "alias": "Make managed solution zip",
+      "command": "zip -p [[customControlsPath]]\\bin\\Release\\[[displaySolutionName]]"
+    },
+    {
+      "alias": "Create archive folder",
+      "command": "cmd -c \"mkdir 1.0.[[crm.customcontrols.release]].[[crm.customcontrols.build]]\" -w \"[[customControlsPath]]\\archive\""
+    },
+    {
+      "alias": "Create managed folder",
+      "command": "cmd -c \"mkdir managed\" -w \"[[customControlsPath]]\\archive\\1.0.[[crm.customcontrols.release]].[[crm.customcontrols.build]]\""
+    },
+    {
+      "alias": "Create unmanaged folder",
+      "command": "cmd -c \"mkdir unmanaged\" -w \"[[customControlsPath]]\\archive\\1.0.[[crm.customcontrols.release]].[[crm.customcontrols.build]]\""
+    },
+    {
+      "alias": "Move managed solution",
+      "command": "movepath -sp \"[[customControlsPath]]\\bin\\Release\\[[displaySolutionName]].zip\" -df \"[[customControlsPath]]\\archive\\1.0.[[crm.customcontrols.release]].[[crm.customcontrols.build]]\\managed\""
+    },
+    {
+      "alias": "Move unmanaged solution",
+      "command": "movepath -sp \"[[customControlsPath]]\\bin\\Debug\\[[displaySolutionName]].zip\" -df \"[[customControlsPath]]\\archive\\1.0.[[crm.customcontrols.release]].[[crm.customcontrols.build]]\\unmanaged\""
+    }
+  ]
+}

@@ -20,10 +20,11 @@ export class ControlDetail extends React.Component {
 
 
     async componentDidMount() {
-        const {controlName} = this.props
-        var response = await fetch(`https://raw.githubusercontent.com/ddgranizo/dd-crm-customcontrols/master/src/${controlName}/wiki/wiki.json`)
-        var control = await response.json()
-        this.setState({ control, loading: false })
+        const { control } = this.props
+        console.log(this.props);
+        var response = await fetch(`https://raw.githubusercontent.com/ddgranizo/dd-crm-customcontrols/master/src/${control}/wiki/wiki.json`)
+        var controlObject = await response.json()
+        this.setState({ control: controlObject, loading: false })
         console.log(control)
     }
 
