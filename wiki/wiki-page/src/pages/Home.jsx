@@ -11,15 +11,65 @@ export class Home extends React.Component {
             loading: true,
             releaseInfo: null
         }
-
     }
-
 
     async componentDidMount() {
         const response = await fetch("https://raw.githubusercontent.com/ddgranizo/dd-crm-customcontrols/master/wiki/wiki.json")
         const releaseInfo = await response.json()
         console.log(releaseInfo);
         this.setState({ loading: false, releaseInfo })
+    }
+
+    renderDownloadSection() {
+        const { latestReleaseManagedUrl, latestReleaseUnamanagedUrl, currentVersion, latestReleaseDate } = this.state.releaseInfo
+
+        return (
+            <article className="message is-info Home-leftAligned">
+                <div className="message-header">
+                    Download latest release 🔽🔻🔽
+                </div>
+                <div className="message-body">
+                    <div className="content">
+                        <div className="level">
+                            <div className="level-left w100">
+                                <div className="Home-DonwloadList w100">
+                                    <div class="Home-DonwloadItem card">
+                                        <header class="card-header">
+                                            <p class="card-header-title">Managed (⭐⭐  RECOMENDED ⭐⭐)</p>
+                                        </header>
+                                        <div class="card-content">
+                                            <div class="content">
+                                                Download latest version <a href="#">#{currentVersion}</a> as a <a href="#">Managed</a> solution
+                                                    <br />
+                                                <time datetime="2016-1-1">{latestReleaseDate}</time>
+                                            </div>
+                                        </div>
+                                        <footer class="card-footer">
+                                            <a href={latestReleaseManagedUrl} class="card-footer-item">Download 👇</a>
+                                        </footer>
+                                    </div>
+                                    <div class="Home-DonwloadItem card">
+                                        <header class="card-header">
+                                            <p class="card-header-title">Unmanaged</p>
+                                        </header>
+                                        <div class="card-content">
+                                            <div class="content">
+                                                Download latest version <a href="#">#{currentVersion}</a> as a <a href="#">Unmanaged</a> solution
+                                                    <br />
+                                                <time datetime="2016-1-1">{latestReleaseDate}</time>
+                                            </div>
+                                        </div>
+                                        <footer class="card-footer">
+                                            <a href={latestReleaseUnamanagedUrl} class="card-footer-item">Download 👇</a>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>)
+
     }
 
 
@@ -69,6 +119,7 @@ export class Home extends React.Component {
                         <div className="container">
                             <h1 className="title">💊 {projectName} v {currentVersion} 💊</h1>
                             <h2 className="subtitle">{projectDescription}</h2>
+                            {this.renderDownloadSection()}
                             {this.renderReleasesNotes()}
                         </div>
                     </div>

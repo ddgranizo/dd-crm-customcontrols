@@ -1,3 +1,23 @@
+.w100{
+  width: 100%
+}
+
+
+.Home-DonwloadList{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+}
+
+
+.Home-DonwloadItem{
+  margin: 10px;
+  width: 48%
+}
+
+
 .ControlList-list {
   display: flex;
   flex-wrap: wrap;
