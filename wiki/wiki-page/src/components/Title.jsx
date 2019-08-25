@@ -18,9 +18,9 @@ export class Title extends React.Component {
 
                 <div className="navbar-menu">
                     <div className="navbar-start">
-                        <div className="navbar-item"><Link to={`dd-crm-customcontrols/`} >Home</Link></div>
-                        <div className="navbar-item"><Link to={`dd-crm-customcontrols/install`} >Documentation</Link></div>
-                        <div className="navbar-item"><Link to={`dd-crm-customcontrols/contact`} >Contact</Link></div>
+                        <div className="navbar-item"><Link to={`/`} >Home</Link></div>
+                        <div className="navbar-item"><Link to={`/install`} >Documentation</Link></div>
+                        <div className="navbar-item"><Link to={`/contact`} >Contact</Link></div>
                     </div >
 
                     <div className="navbar-end">
