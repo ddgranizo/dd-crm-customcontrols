@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4756fbeb9d214d3114911657d71bbb5f",
+    "revision": "ad90665678e3764513d8f6a47cdeafe0",
     "url": "/dd-crm-customcontrols/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dd-crm-customcontrols/static/css/2.62908225.chunk.css"
   },
   {
-    "revision": "cd79bb4ce9c5125ae160",
+    "revision": "ac25eb9e162988de1e58",
     "url": "/dd-crm-customcontrols/static/css/main.17c12e5f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dd-crm-customcontrols/static/js/2.3b8326bd.chunk.js"
   },
   {
-    "revision": "cd79bb4ce9c5125ae160",
-    "url": "/dd-crm-customcontrols/static/js/main.e01ffcd8.chunk.js"
+    "revision": "ac25eb9e162988de1e58",
+    "url": "/dd-crm-customcontrols/static/js/main.64f1f19a.chunk.js"
   },
   {
     "revision": "b908286c8572275c1c30",
