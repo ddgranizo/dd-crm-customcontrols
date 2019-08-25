@@ -2,6 +2,7 @@ import React from 'react'
 import 'bulma/css/bulma.css'
 import { ControlList } from './../components/ControlList';
 import { ClipLoader } from 'react-spinners';
+import { DownloadCard } from '../components/DownloadCard';
 
 export class Home extends React.Component {
 
@@ -27,12 +28,28 @@ export class Home extends React.Component {
                 <div className="message-header">
                     Download latest release 🔽🔻🔽
                 </div>
-                <div className="message-body">
+                <div className="message-body" style={{backgroundColor: '#209cee'}}>
                     <div className="content">
                         <div className="level">
                             <div className="level-left w100">
-                                <div className="Home-DonwloadList w100">
-                                    <div className="Home-DonwloadItem card">
+                                <div className="ListWrapItems w100">
+                                    <DownloadCard
+                                        emoji="📕"
+                                        isRecomended={true}
+                                        isManaged={true}
+                                        date={latestReleaseDate}
+                                        url={latestReleaseManagedUrl}
+                                        version={currentVersion}
+                                    />
+                                     <DownloadCard
+                                        emoji="📗"
+                                        isRecomended={false}
+                                        isManaged={false}
+                                        date={latestReleaseDate}
+                                        url={latestReleaseUnamanagedUrl}
+                                        version={currentVersion}
+                                    />
+                                    {/* <div className="Home-DonwloadItem card">
                                         <header className="card-header">
                                             <p className="card-header-title">📕 Managed (⭐⭐  RECOMENDED ⭐⭐)</p>
                                         </header>
@@ -61,7 +78,7 @@ export class Home extends React.Component {
                                         <footer className="card-footer">
                                             <a href={latestReleaseUnamanagedUrl} className="card-footer-item">Download 👇</a>
                                         </footer>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

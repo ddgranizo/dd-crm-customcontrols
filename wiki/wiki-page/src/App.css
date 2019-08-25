@@ -17,6 +17,38 @@
   width: 48%
 }
 
+@media screen and (min-width: 500px) and (max-width: 1200px) { 
+ 
+}
+
+@media screen and (max-width: 1200px) {
+  .ListWrapItems{
+    flex-direction: column;
+    padding: 16px;
+  }
+  .ListWrapItem {
+    margin-bottom: 16px;
+  }
+}
+
+/* For Desktop */
+@media screen and (min-width: 1200px) {
+  .ListWrapItems{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+  }
+
+  .ListWrapItem {
+    margin-bottom: 24px;
+    width: 48%;
+    flex-grow: 0 !important
+  }
+  
+}
+
 
 .ControlList-list {
   display: flex;

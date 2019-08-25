@@ -11,10 +11,10 @@ export class ControlList extends React.Component {
             <article className="message is-warning Home-leftAligned">
                
                 <div className="message-body ControlList-mainBody">
-                    <div className="ControlList-list level">
+                    <div className="ListWrapItems level">
                         {
                             controls.map((control, index) => {
-                                return <div className="ControlList-listItem level-item has-text-centered" key={index}><ControlDetail control={control} ></ControlDetail></div>
+                                return <div className="ListWrapItem level-item has-text-centered" key={index}><ControlDetail control={control} ></ControlDetail></div>
                             }) 
                         }
                     </div>
