@@ -28,7 +28,7 @@ export class Home extends React.Component {
                 <div className="message-header">
                     Download latest release 🔽🔻🔽
                 </div>
-                <div className="message-body" style={{backgroundColor: '#209cee'}}>
+                <div className="message-body Home-DownloadSection AdjustPaddingScreen">
                     <div className="content">
                         <div className="level">
                             <div className="level-left w100">
@@ -49,36 +49,6 @@ export class Home extends React.Component {
                                         url={latestReleaseUnamanagedUrl}
                                         version={currentVersion}
                                     />
-                                    {/* <div className="Home-DonwloadItem card">
-                                        <header className="card-header">
-                                            <p className="card-header-title">📕 Managed (⭐⭐  RECOMENDED ⭐⭐)</p>
-                                        </header>
-                                        <div className="card-content">
-                                            <div className="content">
-                                                Download latest version  <a href="#">#{currentVersion}</a> as a <a href="#">Managed</a> solution
-                                                    <br />
-                                                <time dateTime="2016-1-1">📅 {latestReleaseDate}</time>
-                                            </div>
-                                        </div>
-                                        <footer className="card-footer">
-                                            <a href={latestReleaseManagedUrl} className="card-footer-item">Download 👇</a>
-                                        </footer>
-                                    </div>
-                                    <div className="Home-DonwloadItem card">
-                                        <header className="card-header">
-                                            <p className="card-header-title">📗 Unmanaged</p>
-                                        </header>
-                                        <div className="card-content">
-                                            <div className="content">
-                                                Download latest version <a href="#">#{currentVersion}</a> as a <a href="#">Unmanaged</a> solution
-                                                    <br />
-                                                <time dateTime="2016-1-1">📅 {latestReleaseDate}</time>
-                                            </div>
-                                        </div>
-                                        <footer className="card-footer">
-                                            <a href={latestReleaseUnamanagedUrl} className="card-footer-item">Download 👇</a>
-                                        </footer>
-                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -98,7 +68,7 @@ export class Home extends React.Component {
         const latestRelease = releaseNotes[0]
 
         return (
-            <article className="message is-info Home-leftAligned">
+            <article className="message is-info Home-leftAligned AdjustPaddingScreen">
                 <div className="message-header">
                     Lastest release notes 🔥🔥🔥
                 </div>

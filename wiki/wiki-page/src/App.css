@@ -12,6 +12,10 @@
 }
 
 
+.Home-DownloadSection{
+  background-color: '#209cee'
+}
+
 .Home-DonwloadItem{
   margin: 10px;
   width: 48%
@@ -21,6 +25,13 @@
  
 }
 
+@media screen and (max-width: 500px) {
+  .AdjustPaddingScreen{
+    padding: 0px !important
+  }
+}
+
+
 @media screen and (max-width: 1200px) {
   .ListWrapItems{
     flex-direction: column;
@@ -29,6 +40,7 @@
   .ListWrapItem {
     margin-bottom: 16px;
   }
+  
 }
 
 /* For Desktop */
@@ -46,7 +58,7 @@
     width: 48%;
     flex-grow: 0 !important
   }
-  
+
 }
 
 
@@ -84,7 +96,7 @@
   background-color: #ffdd57;
 }
 .ControlDetail-card{
-  max-width: 50em !important;
+  /* max-width: 50em !important; */
   width: 50em !important;
   padding: 1em;
 }
