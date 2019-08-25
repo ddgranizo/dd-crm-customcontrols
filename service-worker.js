@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dd-crm-customcontrols/precache-manifest.4033f960c7c191ce3db32ac68a3a520e.js"
+  "/dd-crm-customcontrols/precache-manifest.f4b07c0b8178f31b776836e72f5945db.js"
 );
 
 self.addEventListener('message', (event) => {
