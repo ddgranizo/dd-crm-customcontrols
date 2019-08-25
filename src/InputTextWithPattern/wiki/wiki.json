@@ -1,6 +1,6 @@
 {
   "name": "InputTextWithLength",
-  "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithPattern/wiki/img/main.png",
+  "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/main.png",
   "description": "Validate any string in real time while writting agains one regex pattern",
   "currentVersion": "0.0.20",
   "namespace": "DD.Crm.CustomControls.Fields",
@@ -42,17 +42,17 @@
     {
       "name": "Access to the custom control setup",
       "description": "Access to the custom control septup within the form editor",
-      "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithPattern/wiki/img/step1.png"
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step1.png"
     },
     {
       "name": "Setup pattern",
       "description": "Include a valid pattern (check patterns in http://regexlib.com/ and https://regex101.com/)",
-      "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithPattern/wiki/img/step2.png"
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step2.png"
     },
     {
       "name": "Setup error message",
       "description": "Writte an error message that will show up if string doesn't match de pattern",
-      "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithPattern/wiki/img/step3.png"
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step3.png"
     },
     {
       "name": "Save and publish",
@@ -61,7 +61,7 @@
     {
       "name": "Test it",
       "description": "Now you can write some string to see if match or not with the patter",
-      "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithPattern/wiki/img/step4.png"
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step4.png"
     }
   ]
 }

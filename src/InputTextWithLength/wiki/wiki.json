@@ -1,6 +1,6 @@
 {
   "name": "InputTextWithLength",
-  "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithLength/wiki/img/main.png",
+  "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithLength/wiki/img/main.png",
   "description": "See the length of the field while writting",
   "currentVersion": "0.0.2",
   "namespace": "DD.Crm.CustomControls.Fields",
@@ -23,7 +23,7 @@
     {
       "name": "Write some text",
       "description": "Write some text and see the length at the right",
-      "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithLength/wiki/img/step1.png"
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithLength/wiki/img/step1.png"
     }
   ]
 }

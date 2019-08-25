@@ -1,6 +1,6 @@
 {
   "name": "InputTextWithAttached",
-  "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithAttached/wiki/img/main.png",
+  "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithAttached/wiki/img/main.png",
   "description": "Attach one file in every string field in your form, so you can control if your record has the proper attached files. In background all the files will be attached into annotation entity",
   "currentVersion": "1.0.0.1",
   "emoji":"🎨",
@@ -29,22 +29,22 @@
     {
       "name": "Click Select file",
       "description": "Click in 'Select file' link",
-      "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithAttached/wiki/img/step1.png" 
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithAttached/wiki/img/step1.png" 
     },
     {
       "name": "Select file",
       "description": "Select the file from your computer",
-      "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithAttached/wiki/img/step2.png" 
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithAttached/wiki/img/step2.png" 
     },
     {
       "name": "Upload it",
       "description": "The file will be uploaded automatically",
-      "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithAttached/wiki/img/step3.png" 
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithAttached/wiki/img/step3.png" 
     },
     {
       "name": "Download",
       "description": "Click in the filename for download",
-      "image": "https://ddgranizo.github.io/dd-crm-customcontrols/src/InputTextWithAttached/wiki/img/step4.png" 
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithAttached/wiki/img/step4.png" 
     }
   ]
 }
