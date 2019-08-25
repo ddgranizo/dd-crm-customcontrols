@@ -28,7 +28,7 @@ export class Home extends React.Component {
                 <div className="message-header">
                     Download latest release 🔽🔻🔽
                 </div>
-                <div className="message-body Home-DownloadSection AdjustPaddingScreen">
+                <div className="message-body Home-DownloadSection AdjustPaddingScreen Home-DownloadSection">
                     <div className="content">
                         <div className="level">
                             <div className="level-left w100">
