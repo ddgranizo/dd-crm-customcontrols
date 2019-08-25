@@ -3,7 +3,10 @@ import 'bulma/css/bulma.css'
 
 export class NotFound extends React.Component {
 
+
+
     render() {
+        console.log(this.props);
         return (
             <section className="hero is-danger">
                 <div className="hero-body">
