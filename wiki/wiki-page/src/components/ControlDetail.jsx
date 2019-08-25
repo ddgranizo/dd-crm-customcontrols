@@ -21,11 +21,9 @@ export class ControlDetail extends React.Component {
 
     async componentDidMount() {
         const { control } = this.props
-        console.log(this.props);
         var response = await fetch(`https://raw.githubusercontent.com/ddgranizo/dd-crm-customcontrols/master/src/${control}/wiki/wiki.json`)
         var controlObject = await response.json()
         this.setState({ control: controlObject, loading: false })
-        console.log(control)
     }
 
     setActiveTab = (tab) => {

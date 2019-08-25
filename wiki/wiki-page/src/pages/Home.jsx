@@ -16,7 +16,6 @@ export class Home extends React.Component {
     async componentDidMount() {
         const response = await fetch("https://raw.githubusercontent.com/ddgranizo/dd-crm-customcontrols/master/wiki/wiki.json")
         const releaseInfo = await response.json()
-        console.log(releaseInfo);
         this.setState({ loading: false, releaseInfo })
     }
 
@@ -33,34 +32,34 @@ export class Home extends React.Component {
                         <div className="level">
                             <div className="level-left w100">
                                 <div className="Home-DonwloadList w100">
-                                    <div class="Home-DonwloadItem card">
-                                        <header class="card-header">
-                                            <p class="card-header-title">📕 Managed (⭐⭐  RECOMENDED ⭐⭐)</p>
+                                    <div className="Home-DonwloadItem card">
+                                        <header className="card-header">
+                                            <p className="card-header-title">📕 Managed (⭐⭐  RECOMENDED ⭐⭐)</p>
                                         </header>
-                                        <div class="card-content">
-                                            <div class="content">
+                                        <div className="card-content">
+                                            <div className="content">
                                                 Download latest version  <a href="#">#{currentVersion}</a> as a <a href="#">Managed</a> solution
                                                     <br />
-                                                <time datetime="2016-1-1">📅 {latestReleaseDate}</time>
+                                                <time dateTime="2016-1-1">📅 {latestReleaseDate}</time>
                                             </div>
                                         </div>
-                                        <footer class="card-footer">
-                                            <a href={latestReleaseManagedUrl} class="card-footer-item">Download 👇</a>
+                                        <footer className="card-footer">
+                                            <a href={latestReleaseManagedUrl} className="card-footer-item">Download 👇</a>
                                         </footer>
                                     </div>
-                                    <div class="Home-DonwloadItem card">
-                                        <header class="card-header">
-                                            <p class="card-header-title">📗 Unmanaged</p>
+                                    <div className="Home-DonwloadItem card">
+                                        <header className="card-header">
+                                            <p className="card-header-title">📗 Unmanaged</p>
                                         </header>
-                                        <div class="card-content">
-                                            <div class="content">
+                                        <div className="card-content">
+                                            <div className="content">
                                                 Download latest version <a href="#">#{currentVersion}</a> as a <a href="#">Unmanaged</a> solution
                                                     <br />
-                                                <time datetime="2016-1-1">📅 {latestReleaseDate}</time>
+                                                <time dateTime="2016-1-1">📅 {latestReleaseDate}</time>
                                             </div>
                                         </div>
-                                        <footer class="card-footer">
-                                            <a href={latestReleaseUnamanagedUrl} class="card-footer-item">Download 👇</a>
+                                        <footer className="card-footer">
+                                            <a href={latestReleaseUnamanagedUrl} className="card-footer-item">Download 👇</a>
                                         </footer>
                                     </div>
                                 </div>

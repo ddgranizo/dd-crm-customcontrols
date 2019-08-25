@@ -11,11 +11,13 @@ import { NotFound } from '../pages/NotFound';
 export class Body extends React.Component {
 
     render() {
+        
         return (
             <Switch>
-                <Route exact path='' component={Home} />
-                <Route exact path='install' component={Installation} />
-                <Route exact path='contact' component={Contact} />
+                <Route exact path='/' component={Home} />
+                <Route exact path='/home' component={Home} />
+                <Route exact path='/install' component={Installation} />
+                <Route exact path='/contact' component={Contact} />
                 <Route component={NotFound} />
             </Switch>
         )
