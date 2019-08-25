@@ -13,9 +13,9 @@ export class Body extends React.Component {
     render() {
         return (
             <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/install' component={Installation} />
-                <Route exact path='/contact' component={Contact} />
+                <Route exact path='dd-crm-customcontrols/' component={Home} />
+                <Route exact path='dd-crm-customcontrols/install' component={Installation} />
+                <Route exact path='dd-crm-customcontrols/contact' component={Contact} />
                 <Route component={NotFound} />
             </Switch>
         )
