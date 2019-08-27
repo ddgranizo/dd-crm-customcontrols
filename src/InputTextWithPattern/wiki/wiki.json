@@ -51,7 +51,7 @@
     },
     {
       "name": "Setup error message",
-      "description": "Writte an error message that will show up if string doesn't match de pattern",
+      "description": "Write an error message that will show up if string doesn't match de pattern",
       "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step3.png"
     },
     {
