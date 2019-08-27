@@ -4,6 +4,7 @@
     "msbuildPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\MSBuild\\Current\\Bin\\msbuild.exe",
     "customControlsPath": "C:\\Users\\daniel.diazg\\MyRepos\\dd-crm-customcontrols\\release",
     "customControlsWikiPath": "C:\\Users\\daniel.diazg\\MyRepos\\dd-crm-customcontrols\\wiki",
+    "customControlsSrcPath": "C:\\Users\\daniel.diazg\\MyRepos\\dd-crm-customcontrols\\src",
     "displaySolutionName": "DD.Crm.CustomControls",
     "uniqueSolutionName": "dd_crm_customcontrols"
   },
