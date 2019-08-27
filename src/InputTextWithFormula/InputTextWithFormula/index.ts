@@ -26,16 +26,15 @@ export class InputTextWithFormula implements ComponentFramework.StandardControl<
 	public onChangeValue(value: IValue) {
 		this._value = value;
 		this._notifyOutputChanged();
-
 	}
+	
 
 	public updateView(context: ComponentFramework.Context<IInputs>): void {
 
 		const raw = context.parameters.numberProperty.raw;
-		console.log("raw:", raw)
 		let rawTyped: number | undefined = raw;
-		if (raw != 0 && rawTyped as any == "") {
-			rawTyped = undefined;
+		if (raw as any === "" || raw as any == null) {
+			rawTyped = 0;
 		}
 		this._value = { numberValue: rawTyped };
 
@@ -46,11 +45,11 @@ export class InputTextWithFormula implements ComponentFramework.StandardControl<
 		}
 
 		let value: IValue = this._value;
-		console.log(value);
 		let props: IReactWrapperProps = {
 			value: value,
 			handlerChange: this.onChangeValue,
-			customProps: customProps
+			customProps: customProps,
+
 		}
 		ReactDOM.render(
 			React.createElement(ReactWrapper, props)

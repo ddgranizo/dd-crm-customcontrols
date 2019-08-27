@@ -1,3 +1,13 @@
+.ResultFormula-spanWrapper{
+    margin-top: 0.2em;
+    margin-left: 0.3em;
+    font-size: 1.2em;
+}
+
+.ResultFormula-error{
+    color: #C40109
+}
+
 .ReactWrapper-tooltipContainer{
     background-color:#0e2247;
     border-radius: 2px;
@@ -67,6 +77,26 @@
     margin-right: 0px;
     margin-left: 0px;
     text-overflow: ellipsis;
+}
+.ReactWrapper-crmLabel:hover{
+    border-radius: 0px;
+    border-color: rgb(102,102,102);
+    line-height: 2.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    font-weight: 400;
+    border-width: 1px;
+    color: rgb(0,0,0);
+    font-size: 1rem;
+    border-style: solid;
+    height: 2.5rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    text-overflow: ellipsis;
+    flex-grow: 100;
 }
 
 .ReactWrapper-isValidContainer{

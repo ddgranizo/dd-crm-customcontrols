@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { IValuedOverMaskProps } from '../interfaces/IValuedOverMaskProps';
-import { IValuedOverMaskState } from '../interfaces/IValuedOverMaskState';
 import { IEditingComponentProps } from '../interfaces/IEditingComponentProps';
 import { IEditingComponentState } from '../interfaces/IEditingComponentState';
 import { IValue } from '../interfaces/IValue';
+import { ResultFormula } from './custom/ResultFormula';
 
 export class EditingComponent extends React.Component<IEditingComponentProps, IEditingComponentState> {
 
     constructor(props: IEditingComponentProps) {
         super(props);
         this.state = {
-            value: props.value
+            value: props.value,
+            valueString: String(props.value.numberValue)
         }
     }
 
@@ -25,21 +25,24 @@ export class EditingComponent extends React.Component<IEditingComponentProps, IE
 
 
     _handlerOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-
         const value = event.target.value;
-        let nextValue : number | undefined;
+        let nextValue: number | undefined;
+        let raiseUpdateHandler = true;
         if (value == "" || value == null) {
-            nextValue = undefined;
-        }else if (this.isNumeric(value)) {
-            nextValue =  parseInt(value)
-        }else{
-            return;
+            nextValue = 0;
+        } else if (this.isNumeric(value)) {
+            nextValue = parseFloat(value)
+        } else {
+            raiseUpdateHandler = false;
         }
-        const newValue: IValue = {
-            numberValue: nextValue
+        if (raiseUpdateHandler) {
+            const newValue: IValue = {
+                numberValue: nextValue
+            }
+            this.setState({ value: newValue })
+            this.props.updatedHandler(newValue)
         }
-        this.props.updatedHandler(newValue)
-        this.setState({ value: newValue })
+        this.setState({ valueString: value })
     }
 
 
@@ -48,7 +51,8 @@ export class EditingComponent extends React.Component<IEditingComponentProps, IE
     }
 
     render() {
-        const { value } = this.state;
+        const { value, valueString } = this.state
+        const { formula, name, units } = this.props.customProps
         return (
             <div className="ReactWrapper-mainDiv">
                 <div className="ReactWrapper-divFlex" >
@@ -58,8 +62,14 @@ export class EditingComponent extends React.Component<IEditingComponentProps, IE
                         onBlur={this._handlerOnBlur}
                         onChange={this._handlerOnChange}
                         className="ReactWrapper-crmInputText"
-                        value={value.numberValue} />
+                        value={valueString} />
                 </div>
+                <ResultFormula
+                    value={value}
+                    formula={formula}
+                    name={name}
+                    units={units}
+                />
             </div>
         )
     }

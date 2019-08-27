@@ -2,39 +2,46 @@
   "name": "InputTextWithFormula",
   "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithFormula/wiki/img/main.png",
   "description": "Calculate a formula result while writting a number",
-  "currentVersion": "0.0.20",
+  "currentVersion": "1.0.1",
   "namespace": "DD.Crm.CustomControls.Fields",
-  "emoji": "🎋",
-  "githubPath": "https://github.com/ddgranizo/dd-crm-customcontrols/tree/master/src/InputTextWithPattern",
+  "emoji": "⏰",
+  "githubPath": "https://github.com/ddgranizo/dd-crm-customcontrols/tree/master/src/InputTextWithFormula",
   "infoBullets": [
     "Use this controls in number fields (integer, decimal, float)",
     "Use a valid formula expression"
   ],
   "parameters": [
     {
-      "name": "textProperty",
+      "name": "numberProperty",
       "displayName": "Input value",
       "type": "SingleLine.Text",
-      "description": "Main field",
+      "description": "Number property",
       "bound": true,
       "required": true
     },
     {
-      "name": "patternProperty",
-      "displayName": "Regex pattern",
+      "name": "formulaProperty",
+      "displayName": "Formula",
       "type": "SingleLine.Text",
-      "description": "Regex pattern (do not include first and last '/' character). You can find a lot of regex patterns in http://regexlib.com/ or searching in google. Also you can create your own patterns: https://regex101.com/",
+      "description": "Formula expression (use + - * / and **)",
       "bound": false,
       "required": true
     },
     {
-      "name": "errorMessageProperty",
-      "displayName": "Error message",
+      "name": "resultName",
+      "displayName": "Result name",
       "type": "Input value",
-      "tips": "You can find a lot of regex patterns in http://regexlib.com/ or searching in google. Also you can create your own patterns: https://regex101.com/",
       "description": "Message for show if string doesn't match",
       "bound": false,
-      "required": true
+      "required": false
+    },
+    {
+      "name": "resultUnits",
+      "displayName": "Result units",
+      "type": "Input value",
+      "description": "String with the result units",
+      "bound": false,
+      "required": false
     }
   ],
   "releaseNotes": ["First version of the component"],

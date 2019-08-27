@@ -22,8 +22,11 @@ export class AttachManager extends React.Component<IAttachManagerProps, IAttachM
         this._cachedEntityHasAnnotationsValue = false;
         this.state = this.getInitialState(this.props.annotationId)
 
-        //this._annotationAccessData = new FakeAnnotationDataAccess(true);
-        this._annotationAccessData = new XrmAnnotationDataAccessService(props.context)
+        if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+            this._annotationAccessData = new FakeAnnotationDataAccess(true);
+        } else {
+            this._annotationAccessData = new XrmAnnotationDataAccessService(props.context)
+        }
     }
 
     getInitialState(annotationId: string) {

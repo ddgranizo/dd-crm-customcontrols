@@ -1,5 +1,6 @@
 import { IValue } from "./IValue";
 
 export  interface IEditingComponentState {
-    value: IValue
+    value: IValue,
+    valueString: string
 }

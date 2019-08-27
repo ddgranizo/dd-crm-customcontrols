@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="DD.Crm.CustomControls.Fields" constructor="InputTextWithFormula" version="0.0.1" display-name-key="DD.Crm.CustomControls.Fields.InputTextWithFormula" description-key="Basic input text made with react" control-type="standard">
+  <control namespace="DD.Crm.CustomControls.Fields" constructor="InputTextWithFormula" version="0.0.4" display-name-key="DD.Crm.CustomControls.Fields.InputTextWithFormula" description-key="Basic input text made with react" control-type="standard">
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
-    <property name="numberProperty" display-name-key="Input value" description-key="number property" of-type-group="numbers" usage="bound" required="true" />
-    <property name="formulaProperty" display-name-key="Formula" description-key="Formula expression (use + - * and /)" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="numberProperty" display-name-key="Input value" description-key="Number property" of-type-group="numbers" usage="bound" required="true" />
+    <property name="formulaProperty" display-name-key="Formula" description-key="Formula expression (use + - * / and **)" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="resultName" display-name-key="Result name" description-key="String with the result name" of-type="SingleLine.Text" usage="input" required="false" />
     <property name="resultUnits" display-name-key="Result units" description-key="String with the result units" of-type="SingleLine.Text" usage="input" required="false" />
     <!-- 

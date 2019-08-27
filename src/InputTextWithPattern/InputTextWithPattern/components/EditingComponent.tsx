@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { IValuedOverMaskProps } from '../interfaces/IValuedOverMaskProps';
-import { IValuedOverMaskState } from '../interfaces/IValuedOverMaskState';
 import { IEditingComponentProps } from '../interfaces/IEditingComponentProps';
 import { IEditingComponentState } from '../interfaces/IEditingComponentState';
 import { IValue } from '../interfaces/IValue';
@@ -31,12 +29,12 @@ export class EditingComponent extends React.Component<IEditingComponentProps, IE
         }
         this.props.updatedHandler(newValue)
         this.setState({ value: newValue })
-        
     }
 
 
 
     render() {
+        
         const { value } = this.state
         const { customProps } = this.props
         return (
