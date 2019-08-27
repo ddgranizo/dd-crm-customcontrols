@@ -2,7 +2,7 @@
   "name": "InputTextWithLength",
   "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/main.png",
   "description": "Validate any string in real time while writting agains one regex pattern",
-  "currentVersion": "0.1.21",
+  "currentVersion": "0.0.30",
   "namespace": "DD.Crm.CustomControls.Fields",
   "emoji": "🎋",
   "githubPath": "https://github.com/ddgranizo/dd-crm-customcontrols/tree/master/src/InputTextWithPattern",

@@ -2,7 +2,7 @@
   "name": "InputTextWithLength",
   "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithLength/wiki/img/main.png",
   "description": "See the length of the field while writting",
-  "currentVersion": "0.1.2",
+  "currentVersion": "0.0.3",
   "namespace": "DD.Crm.CustomControls.Fields",
   "emoji": "🐙",
   "githubPath": "https://github.com/ddgranizo/dd-crm-customcontrols/tree/master/src/InputTextWithLength",

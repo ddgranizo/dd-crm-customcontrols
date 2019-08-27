@@ -2,7 +2,7 @@
   "name": "InputTextWithAttached",
   "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithAttached/wiki/img/main.png",
   "description": "Attach one file in every string field in your form, so you can control if your record has the proper attached files. In background all the files will be attached into annotation entity",
-  "currentVersion": "0.1.45",
+  "currentVersion": "0.0.46",
   "emoji":"🎨",
   "namespace": "DD.Crm.CustomControls.Fields",
   "githubPath":"https://github.com/ddgranizo/dd-crm-customcontrols/tree/master/src/InputTextWithAttached",

@@ -1,52 +1,77 @@
 {
-    "name": "Deploy custom controls for develop replacing build version",
-    "constants":{
-        "msbuildPath" : "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\MSBuild\\Current\\Bin\\msbuild.exe",
-        "customControlsPath": "C:\\Users\\daniel.diazg\\MyRepos\\dd-crm-customcontrols\\release",
-        "displaySolutionName": "DD.Crm.CustomControls",
-        "uniqueSolutionName" : "dd_crm_customcontrols"
+  "name": "Deploy custom controls for develop replacing build version",
+  "constants": {
+    "msbuildPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\MSBuild\\Current\\Bin\\msbuild.exe",
+    "customControlsPath": "C:\\Users\\daniel.diazg\\MyRepos\\dd-crm-customcontrols\\release",
+    "customControlsSrcPath": "C:\\Users\\daniel.diazg\\MyRepos\\dd-crm-customcontrols\\src",
+    "displaySolutionName": "DD.Crm.CustomControls",
+    "uniqueSolutionName": "dd_crm_customcontrols"
+  },
+  "commands": [
+    {
+      "alias": "Remove old folder bin",
+      "command": "cmd -c \"rmdir bin /s /q\"  -w \"[[customControlsPath]]\""
     },
-    "commands": [
-        {
-            "alias": "Remove old folder bin",
-            "command": "cmd -c \"rmdir bin /s /q\"  -w \"[[customControlsPath]]\""
-        },
-        {
-            "alias": "Remove old folder obj",
-            "command": "cmd -c \"rmdir obj /s /q\"  -w \"[[customControlsPath]]\""
-        },
-        {
-            "alias": "msbuild restore",
-            "command": "cmd -c \"/t:restore\" -f \"[[msbuildPath]]\" -w \"[[customControlsPath]]\""
-        },
-        {
-            "alias": "Build unmanaged solution",
-            "command": "cmd -f \"[[msbuildPath]]\" -w \"[[customControlsPath]]\"",
-			"isDisabled": true
-        },
-        {
-            "alias": "Build managed solution",
-            "command": "cmd -c \"/P:Configuration=Release\" -f \"[[msbuildPath]]\" -w \"[[customControlsPath]]\""
-        },
-        {
-            "alias": "Unzip managed result solution",
-            "command": "unzip -p \"[[customControlsPath]]\\bin\\Release\\release.zip\""
-        },
-        {
-            "alias": "Replace current version with current build number",
-            "command": "replacefilecontent -p \"[[customControlsPath]]\\bin\\Release\\release\\solution.xml\" -o \"<Version>1.0</Version>\" -n \"<Version>1.0.0.[[crm.customcontrols.build]]</Version>\""
-        },
-        {
-            "alias": "Rename result folder name",
-            "command": "renamefolder -o [[customControlsPath]]\\bin\\Release\\release -n [[displaySolutionName]]"
-        },
-        {
-            "alias": "Make managed solution zip",
-            "command": "zip -p [[customControlsPath]]\\bin\\Release\\[[displaySolutionName]]"
-        },
-        {
-            "alias": "Import solution to Dynamics Development Instance",
-            "command": "cmd -f \"dddynamics\" -c \"importsolution -p $$[[customControlsPath]]\\bin\\Release\\[[displaySolutionName]].zip$$ -s $$[[valua.stringconnection.pre]]$$\""
-        }
-    ]
+    {
+      "alias": "Remove old folder obj",
+      "command": "cmd -c \"rmdir obj /s /q\"  -w \"[[customControlsPath]]\""
+    },
+    {
+      "alias": "Remove controls folder obj",
+      "isIteration": true,
+      "iterationType": 2,
+      "values": [
+        "InputTextWithAttached",
+        "InputTextWithFormula",
+        "InputTextWithLength",
+        "InputTextWithPattern"
+      ],
+      "command": "cmd -c \"rmdir obj /s /q\"  -w \"[[customControlsSrcPath]]\\[[i]]\""
+    },
+    {
+      "alias": "Remove controls folder out",
+      "isIteration": true,
+      "iterationType": 2,
+      "values": [
+        "InputTextWithAttached",
+        "InputTextWithFormula",
+        "InputTextWithLength",
+        "InputTextWithPattern"
+      ],
+      "command": "cmd -c \"rmdir out /s /q\"  -w \"[[customControlsSrcPath]]\\[[i]]\""
+    },
+    {
+      "alias": "msbuild restore",
+      "command": "cmd -c \"/t:restore\" -f \"[[msbuildPath]]\" -w \"[[customControlsPath]]\""
+    },
+    {
+      "alias": "Build unmanaged solution",
+      "command": "cmd -f \"[[msbuildPath]]\" -w \"[[customControlsPath]]\"",
+      "isDisabled": true
+    },
+    {
+      "alias": "Build managed solution",
+      "command": "cmd -c \"/P:Configuration=Release\" -f \"[[msbuildPath]]\" -w \"[[customControlsPath]]\""
+    },
+    {
+      "alias": "Unzip managed result solution",
+      "command": "unzip -p \"[[customControlsPath]]\\bin\\Release\\release.zip\""
+    },
+    {
+      "alias": "Replace current version with current build number",
+      "command": "replacefilecontent -p \"[[customControlsPath]]\\bin\\Release\\release\\solution.xml\" -o \"<Version>1.0</Version>\" -n \"<Version>1.0.0.[[crm.customcontrols.build]]</Version>\""
+    },
+    {
+      "alias": "Rename result folder name",
+      "command": "renamefolder -o [[customControlsPath]]\\bin\\Release\\release -n [[displaySolutionName]]"
+    },
+    {
+      "alias": "Make managed solution zip",
+      "command": "zip -p [[customControlsPath]]\\bin\\Release\\[[displaySolutionName]]"
+    },
+    {
+      "alias": "Import solution to Dynamics Development Instance",
+      "command": "cmd -f \"dddynamics\" -c \"importsolution -p $$[[customControlsPath]]\\bin\\Release\\[[displaySolutionName]].zip$$ -s $$[[valua.stringconnection.pre]]$$\""
+    }
+  ]
 }

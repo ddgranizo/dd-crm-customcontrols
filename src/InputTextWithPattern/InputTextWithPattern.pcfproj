@@ -9,7 +9,7 @@
   
   <PropertyGroup>
     <Name>InputTextWithPattern</Name>
-    <ProjectGuid>cfad9456-e86c-4388-915d-6b01b4aca933</ProjectGuid>
+    <ProjectGuid>cfad9456-e86c-4388-915d-6b01b4aca934</ProjectGuid>
     <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
   </PropertyGroup>
 

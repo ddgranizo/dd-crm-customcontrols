@@ -1,40 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="DD.Crm.CustomControls.Fields" constructor="InputTextWithPattern" version="0.0.24" display-name-key="DD.Crm.CustomControls.Fields.InputTextWithPattern" description-key="Make one string field to match with some pattern (email, url, card number, etc)" control-type="standard">
-    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+  <control 
+    namespace="DD.Crm.CustomControls.Fields" 
+    constructor="InputTextWithPattern" 
+    version="0.0.30"
+    display-name-key="DD.Crm.CustomControls.Fields.InputTextWithPattern" 
+    description-key="Make one string field to match with some pattern (email, url, card number, etc)" 
+    control-type="standard">
     <property name="textProperty" display-name-key="Input value" description-key="Main field" of-type="SingleLine.Text" usage="bound" required="true" />
     <property name="patternProperty" display-name-key="Regex pattern" description-key="Regex pattern (do not include first and last '/' character). You can find a lot of regex patterns in http://regexlib.com/ or searching in google. Also you can create your own patterns: https://regex101.com/" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="errorMessageProperty" display-name-key="Error message" description-key="Message for show if string doesn't match" of-type="SingleLine.Text" usage="input" required="true" />
-    <!-- 
-      Property node's of-type attribute can be of-type-group attribute. 
-      Example:
-      <type-group name="numbers">
-        <type>Whole.None</type>
-        <type>Currency</type>
-        <type>FP</type>
-        <type>Decimal</type>
-      </type-group>
-      <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
-    -->
     <resources>
       <code path="index.ts" order="1"/>
       <css path="style.css" order="2" />
-      <!-- UNCOMMENT TO ADD MORE RESOURCES
-      <css path="css/InputTextWithPattern.css" order="1" />
-      <resx path="strings/InputTextWithPattern.1033.resx" version="1.0.0" />
-      -->
     </resources>
-    <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
-    <feature-usage>
-      <uses-feature name="Device.captureAudio" required="true" />
-      <uses-feature name="Device.captureImage" required="true" />
-      <uses-feature name="Device.captureVideo" required="true" />
-      <uses-feature name="Device.getBarcodeValue" required="true" />
-      <uses-feature name="Device.getCurrentPosition" required="true" />
-      <uses-feature name="Device.pickFile" required="true" />
-      <uses-feature name="Utility" required="true" />
-      <uses-feature name="WebAPI" required="true" />
-    </feature-usage>
-    -->
   </control>
 </manifest>

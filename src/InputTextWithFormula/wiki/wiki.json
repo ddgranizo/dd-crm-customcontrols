@@ -2,7 +2,7 @@
   "name": "InputTextWithFormula",
   "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithFormula/wiki/img/main.png",
   "description": "Calculate a formula result while writting a number",
-  "currentVersion": "1.0.1",
+  "currentVersion": "0.0.4",
   "namespace": "DD.Crm.CustomControls.Fields",
   "emoji": "⏰",
   "githubPath": "https://github.com/ddgranizo/dd-crm-customcontrols/tree/master/src/InputTextWithFormula",
@@ -49,26 +49,27 @@
     {
       "name": "Access to the custom control setup",
       "description": "Access to the custom control septup within the form editor",
-      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step1.png"
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithFormula/wiki/img/step1.png"
     },
     {
-      "name": "Setup pattern",
-      "description": "Include a valid pattern (check patterns in http://regexlib.com/ and https://regex101.com/)",
-      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step2.png"
+      "name": "Setup formula",
+      "description": "Include any valid formula using common operators (+ - / * or **). The value that will be replaced is 'x'. Example: 0.21*x",
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithFormula/wiki/img/step2.png"
     },
     {
-      "name": "Setup error message",
-      "description": "Writte an error message that will show up if string doesn't match de pattern",
-      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step3.png"
+      "name": "Setup name",
+      "description": "Write the name that will be showed up before the result",
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithFormula/wiki/img/step3.png"
     },
     {
-      "name": "Save and publish",
-      "description": "Save and publish in the form editor"
+      "name": "Setup units",
+      "description": "Write the units yout want appears after the result",
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step4.png"
     },
     {
       "name": "Test it",
-      "description": "Now you can write some string to see if match or not with the patter",
-      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step4.png"
+      "description": "Write some number",
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step5.png"
     }
   ]
 }

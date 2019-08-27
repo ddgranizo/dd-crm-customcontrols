@@ -7,9 +7,7 @@
     "displaySolutionName": "DD.Crm.CustomControls",
     "uniqueSolutionName": "dd_crm_customcontrols"
   },
-  "variables":[
-    "previousVersion"
-  ],
+  "variables": ["previousVersion"],
   "commands": [
     {
       "alias": "Confirm update componente\\Wiki.json",
@@ -27,6 +25,31 @@
       "alias": "Remove old folder obj",
       "command": "cmd -c \"rmdir obj /s /q\"  -w \"[[customControlsPath]]\""
     },
+    {
+      "alias": "Remove controls folder obj",
+      "isIteration": true,
+      "iterationType": 2,
+      "values": [
+        "InputTextWithAttached",
+        "InputTextWithFormula",
+        "InputTextWithLength",
+        "InputTextWithPattern"
+      ],
+      "command": "cmd -c \"rmdir obj /s /q\"  -w \"[[customControlsSrcPath]]\\[[i]]\""
+    },
+    {
+      "alias": "Remove controls folder out",
+      "isIteration": true,
+      "iterationType": 2,
+      "values": [
+        "InputTextWithAttached",
+        "InputTextWithFormula",
+        "InputTextWithLength",
+        "InputTextWithPattern"
+      ],
+      "command": "cmd -c \"rmdir out /s /q\"  -w \"[[customControlsSrcPath]]\\[[i]]\""
+    },
+
     {
       "alias": "msbuild restore",
       "command": "cmd -c \"/t:restore\" -f \"[[msbuildPath]]\" -w \"[[customControlsPath]]\""
