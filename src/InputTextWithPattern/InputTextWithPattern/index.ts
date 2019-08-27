@@ -23,15 +23,17 @@ export class InputTextWithPattern implements ComponentFramework.StandardControl<
 		container.appendChild(this._container);
 		this.onChangeValue = this.onChangeValue.bind(this);
 		this.onChangeValue({ stringValue: context.parameters.textProperty.raw });
+
+		console.log("InputTextWithPattern Loaded!");
 	}
 
 	public onChangeValue(value: IValue) {
 		this._value = value;
 		this._notifyOutputChanged();
-		
 	}
 
 	public updateView(context: ComponentFramework.Context<IInputs>): void {
+		
 		this._value = { stringValue: context.parameters.textProperty.raw };
 		this._pattern = context.parameters.patternProperty.raw;
 		this._errorMessage = context.parameters.errorMessageProperty.raw;

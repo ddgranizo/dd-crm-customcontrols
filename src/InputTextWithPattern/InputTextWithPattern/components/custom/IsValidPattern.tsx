@@ -13,6 +13,12 @@ export class IsValidPattern extends React.Component<IIsValidPatternProps, IIsVal
         }
     }
 
+    componentWillReceiveProps(nextProps: IIsValidPatternProps) {
+        this.setState({
+            isValid: this.isValid(nextProps.text, nextProps.pattern)
+        })
+    }
+
     isValid(text: string, pattern: RegExp) {
         return text == null || text == "" || pattern.test(text)
     }

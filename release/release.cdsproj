@@ -42,6 +42,7 @@
     <ProjectReference Include="..\src\InputTextWithPattern\InputTextWithPattern.pcfproj" />
     <ProjectReference Include="..\src\InputTextWithLength\InputTextWithLength.pcfproj" />
     <ProjectReference Include="..\src\InputTextWithAttached\InputTextWithAttached.pcfproj" />
+    <ProjectReference Include="..\src\InputTextWithFormula\InputTextWithFormula.pcfproj" />
   </ItemGroup>
 
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />

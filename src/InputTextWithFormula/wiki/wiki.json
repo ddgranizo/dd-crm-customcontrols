@@ -1,0 +1,74 @@
+{
+  "name": "InputTextWithFormula",
+  "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithFormula/wiki/img/main.png",
+  "description": "Calculate a formula result while writting a number",
+  "currentVersion": "1.0.1",
+  "namespace": "DD.Crm.CustomControls.Fields",
+  "emoji": "⏰",
+  "githubPath": "https://github.com/ddgranizo/dd-crm-customcontrols/tree/master/src/InputTextWithFormula",
+  "infoBullets": [
+    "Use this controls in number fields (integer, decimal, float)",
+    "Use a valid formula expression"
+  ],
+  "parameters": [
+    {
+      "name": "numberProperty",
+      "displayName": "Input value",
+      "type": "SingleLine.Text",
+      "description": "Number property",
+      "bound": true,
+      "required": true
+    },
+    {
+      "name": "formulaProperty",
+      "displayName": "Formula",
+      "type": "SingleLine.Text",
+      "description": "Formula expression (use + - * / and **)",
+      "bound": false,
+      "required": true
+    },
+    {
+      "name": "resultName",
+      "displayName": "Result name",
+      "type": "Input value",
+      "description": "Message for show if string doesn't match",
+      "bound": false,
+      "required": false
+    },
+    {
+      "name": "resultUnits",
+      "displayName": "Result units",
+      "type": "Input value",
+      "description": "String with the result units",
+      "bound": false,
+      "required": false
+    }
+  ],
+  "releaseNotes": ["First version of the component"],
+  "instructions": [
+    {
+      "name": "Access to the custom control setup",
+      "description": "Access to the custom control septup within the form editor",
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step1.png"
+    },
+    {
+      "name": "Setup pattern",
+      "description": "Include a valid pattern (check patterns in http://regexlib.com/ and https://regex101.com/)",
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step2.png"
+    },
+    {
+      "name": "Setup error message",
+      "description": "Writte an error message that will show up if string doesn't match de pattern",
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step3.png"
+    },
+    {
+      "name": "Save and publish",
+      "description": "Save and publish in the form editor"
+    },
+    {
+      "name": "Test it",
+      "description": "Now you can write some string to see if match or not with the patter",
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step4.png"
+    }
+  ]
+}

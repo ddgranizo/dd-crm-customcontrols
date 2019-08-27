@@ -1,0 +1,120 @@
+.ResultFormula-spanWrapper{
+    margin-top: 0.2em;
+    margin-left: 0.3em;
+    font-size: 1.2em;
+}
+
+.ResultFormula-error{
+    color: #C40109
+}
+
+.ReactWrapper-tooltipContainer{
+    background-color:#0e2247;
+    border-radius: 2px;
+    color:  #f5fbf1;
+    padding: 5px 3px 5px 3px ;
+    border: #000000 0.5px solid;
+}
+
+
+.ReactWrapper-container{
+    display: flex;
+    justify-content: flex-start; 
+    align-items: baseline;
+   /*  align-content: stretch */
+}
+
+
+.ReactWrapper-mainDiv{
+    display: flex;
+    justify-content: flex-start; 
+    flex-grow: 100;
+    align-self: stretch
+}
+
+.ReactWrapper-divFlex{
+    display: flex;
+    flex-grow: 100
+}
+
+.ReactWrapper-crmInputText{
+    border-radius: 0px;
+    border-color: rgb(102,102,102);
+    line-height: 2.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    font-weight: 400;
+    border-width: 1px;
+    color: rgb(0,0,0);
+    font-size: 1rem;
+    border-style: solid;
+    height: 2.5rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    text-overflow: ellipsis;
+    flex-grow: 100;
+}
+
+
+.ReactWrapper-crmLabel{
+    border-color: transparent;
+    outline: none !important;
+    line-height: 2.5rem;
+    padding-right: 0.5rem;
+    border-width: 1px;
+    padding-left: 0.5rem;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: 600;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border-style: solid;
+    height: 2.5rem;
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    text-overflow: ellipsis;
+}
+.ReactWrapper-crmLabel:hover{
+    border-radius: 0px;
+    border-color: rgb(102,102,102);
+    line-height: 2.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    font-weight: 400;
+    border-width: 1px;
+    color: rgb(0,0,0);
+    font-size: 1rem;
+    border-style: solid;
+    height: 2.5rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    text-overflow: ellipsis;
+    flex-grow: 100;
+}
+
+.ReactWrapper-isValidContainer{
+    margin: 5px;
+}
+
+
+.ReactWrapper-isValid{
+    color: #4BB543;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 5px;
+}
+
+
+.ReactWrapper-isNotValid{
+    color: #C40109;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 5px;
+}
