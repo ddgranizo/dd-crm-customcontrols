@@ -66,7 +66,6 @@ export default class XrmAnnotationDataAccessService implements IAnnotationDataAc
                 const setName = k.EntitySetName
                 const annotationObj = annotation as any;
                 annotationObj[bindPlace] = `/${setName}(${currentEntityId})`
-                console.log(annotationObj)
                 const postSettings = {
                     method: 'post',
                     body: JSON.stringify(annotationObj),
