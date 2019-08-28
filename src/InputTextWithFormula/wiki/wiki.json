@@ -64,12 +64,12 @@
     {
       "name": "Setup units",
       "description": "Write the units yout want appears after the result",
-      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step4.png"
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithFormula/wiki/img/step4.png"
     },
     {
       "name": "Test it",
       "description": "Write some number",
-      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step5.png"
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithFormula/wiki/img/step5.png"
     }
   ]
 }
