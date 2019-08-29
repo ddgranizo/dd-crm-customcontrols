@@ -35,5 +35,27 @@
     "InputTextWithLength",
     "InputTextWithFormula",
     "InputTextWithPattern"
+  ],
+  "installation":[
+    {
+      "name": "Test it",
+      "description": "Now you can write some string to see if match or not with the patter",
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step4.png"
+    },
+    {
+      "name": "Test it",
+      "description": "Now you can write some string to see if match or not with the patter",
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step4.png"
+    },
+    {
+      "name": "Test it",
+      "description": "Now you can write some string to see if match or not with the patter",
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step4.png"
+    },
+    {
+      "name": "Test it",
+      "description": "Now you can write some string to see if match or not with the patter",
+      "image": "https://github.com/ddgranizo/dd-crm-customcontrols/raw/master/src/InputTextWithPattern/wiki/img/step4.png"
+    },
   ]
 }
